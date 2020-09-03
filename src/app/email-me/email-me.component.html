@@ -1,0 +1,104 @@
+<app-circles></app-circles>
+<div class="container">
+
+  <!-- Page Title -->
+  <div class="row">
+    <div class="col-md-4 offset-md-4 mt-3">
+      <h1> Contact Me </h1>
+    </div>
+  </div>
+
+  <!-- Email Form -->
+  <div class="row">
+    <div class="col-sm-9 offset-sm-1">
+      <div class="card">
+        <div class="card-body">
+          <form (ngSubmit)="sendEmail(heroForm)"
+                #heroForm="ngForm">
+
+            <!--- Name Input -->
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text"
+                     class="form-control"
+                     id="name"
+                     required
+                     [(ngModel)]="email.name"
+                     name="name"
+                     #nameInput="ngModel"
+                     placeholder="Input your name!">
+
+              <!-- Name Error Msg -->
+              <div [hidden]="nameInput.valid || nameInput.pristine"
+                   class="alert alert-danger">
+                Your name is required dawg!
+              </div>
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text"
+                     class="form-control"
+                     id="email"
+                     required
+                     [(ngModel)]="email.email"
+                     name="email"
+                     #emailInput="ngModel"
+                     placeholder="What's your email?"
+                     email>
+
+              <!-- Email Error Msg -->
+              <div [hidden]="
+                   emailInput.valid
+                   ||
+                   emailInput.pristine"
+                   class="alert alert-danger">
+                Valid emails only!
+              </div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea type="text"
+                        class="form-control"
+                        id="message"
+                        [(ngModel)]="email.msg"
+                        name="message"
+                        rows="5"
+                        style="resize: none;"
+                        required
+                        placeholder="Say wussup!"
+                        #msgInput="ngModel"></textarea>
+
+              <!-- Message Error Msg -->
+              <div [hidden]="msgInput.valid || msgInput.pristine"
+                   class="alert alert-danger">What? You got nothing to say???</div>
+            </div>
+
+            <!-- Honeypot Input (Mwahaha!) -->
+            <div class="form-group honeypot">
+              <label for='honeypot'>Honey!</label>
+              <input type='text'
+                     class='honeypot'
+                     name='honeypot'
+                     id='honeypot'>
+            </div>
+
+            <div class="container">
+              <div class="row h-100">
+                <div class="col-lg-6 offset-md-3 text-center">
+                  <button type="submit"
+                          class="btn btn-primary w-50"
+                          [disabled]="!heroForm.form.valid"> Send! </button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

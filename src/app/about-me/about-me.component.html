@@ -1,0 +1,85 @@
+<app-circles></app-circles>
+
+<div class="container h-100">
+  <div class='row h-100'
+       style="margin-top: 10%">
+    <div class='col-md-10 offset-md-1 '>
+
+      <!-- Card Deck to Hold About-Me and About-Site Cards -->
+      <div class="card-deck">
+
+        <!-- About Me Card -->
+        <div class="card">
+          <div class=" card-body ">
+
+            <!-- Title -->
+            <div class="card-title text-center">
+              <h1 style="font-size: 2.5em;"> About Me </h1>
+            </div>
+
+            <!-- About Me! -->
+            <div class="card-body ">
+              <p>
+                Hello, I'm Ethan Tanen! If I'm not coding up something saucy, I'm either
+                making sweet music for a sad world, navigating perilous whitewater or cooling with DC's elite. This is
+                my
+                website! You
+                can read my resume, checkout some of my software projects and get in touch via the contact page. Enjoy!
+              </p>
+
+              <!-- Picture of My Handsome Mug! -->
+              <div class="text-center">
+                <img src='assets/me.jpg'
+                     class="img-thumbnail rounded"
+                     style='width: 50%'>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About the Website Card -->
+        <div class="card">
+          <div class=" card-body ">
+
+            <!-- Title -->
+            <div class="card-title text-center">
+              <h1 style="font-size: 2.5em;"> About the Site </h1>
+            </div>
+
+            <!-- About the Website! -->
+            <div class="card-body ">
+              <p>
+                The website has been an ongoing project that has undergone a series of stack changes as I learn new
+                technologies. Below is a list of the various stacks. The list is organized with the most recent stacks
+                on top.
+              </p>
+            </div>
+
+            <!-- Technology Stack Table -->
+            <table class="table  table-responsive text-center">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Frontend</th>
+                  <th scope="col">Backend</th>
+                  <th scope="col">Framework</th>
+                  <th scope="col">Host</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Use Angular Structural Directive to Generate Table! -->
+                <tr *ngFor="let stack of stacks; index as idx">
+                  <th scope="row">{{idx}}</th>
+                  <td>{{stack.frontend || 'X'}}</td>
+                  <td>{{stack.backend || 'X'}}</td>
+                  <td>{{stack.framework || 'X'}}</td>
+                  <td>{{stack.host || 'X'}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
