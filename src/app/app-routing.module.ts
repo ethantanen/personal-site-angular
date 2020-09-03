@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'email-me', component: EmailMeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'resume', component: ResumeComponent },
-  { path: '**', redirectTo: '/home' },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({
