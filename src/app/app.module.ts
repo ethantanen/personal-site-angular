@@ -30,7 +30,11 @@ import { MessageService } from './message.service';
     ResumeComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
-  providers: [EmailService, MessageService],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    EmailService,
+    MessageService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

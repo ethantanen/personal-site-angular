@@ -13,7 +13,7 @@ export class EmailService {
 
   send({ name, email, msg }) {
     this.http
-      .post('http://localhost:3000/email', { name, email, msg })
+      .post('http://localhost:8080/email', { name, email, msg })
       .subscribe(
         () =>
           this.messageService.add('Email was successfully sent!', 'primary'),
