@@ -12,13 +12,20 @@ export class EmailService {
   ) {}
 
   send({ name, email, msg }) {
-    this.http.post(`${process.env.HOST}/email`, { name, email, msg }).subscribe(
-      () => this.messageService.add('Email was successfully sent!', 'primary'),
-      () =>
-        this.messageService.add(
-          'Unable to send email at this time. Please try again in a bit!',
-          'danger'
-        )
-    );
+    this.http
+      .post(`https://angular-test-4534.herokuapp.com/email`, {
+        name,
+        email,
+        msg,
+      })
+      .subscribe(
+        () =>
+          this.messageService.add('Email was successfully sent!', 'primary'),
+        () =>
+          this.messageService.add(
+            'Unable to send email at this time. Please try again in a bit!',
+            'danger'
+          )
+      );
   }
 }
