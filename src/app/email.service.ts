@@ -12,16 +12,13 @@ export class EmailService {
   ) {}
 
   send({ name, email, msg }) {
-    this.http
-      .post('http://localhost:8080/email', { name, email, msg })
-      .subscribe(
-        () =>
-          this.messageService.add('Email was successfully sent!', 'primary'),
-        () =>
-          this.messageService.add(
-            'Unable to send email at this time. Please try again in a bit!',
-            'danger'
-          )
-      );
+    this.http.post(`${process.env.HOST}/email`, { name, email, msg }).subscribe(
+      () => this.messageService.add('Email was successfully sent!', 'primary'),
+      () =>
+        this.messageService.add(
+          'Unable to send email at this time. Please try again in a bit!',
+          'danger'
+        )
+    );
   }
 }
