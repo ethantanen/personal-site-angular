@@ -10,7 +10,7 @@ const cors = require('cors');
 
 const app = express();
 
-app.get('/deploy', async (req, res) => {
+app.post('/deploy', async (req, res) => {
 const f =	shell.exec('git checkout origin -- dist')
 console.log(JSON.stringify(f, null, 2))
 res.status(200).end()
