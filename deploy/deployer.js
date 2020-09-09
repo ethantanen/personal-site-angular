@@ -15,7 +15,6 @@ const app = express();
 
 app.use(bodyParser.json());
 app.post("/", async (req, res) => {
-  // const f = shell.exec('git checkout origin/develop -- dist')
   const {
     action,
     pull_request: {
