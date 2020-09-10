@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MessageService } from './message.service';
 
+import { environment } from '../environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -13,7 +15,7 @@ export class EmailService {
 
   send({ name, email, msg }) {
     this.http
-      .post(`https://angular-test-4534.herokuapp.com/email`, {
+      .post(environment.EMAIL_URL, {
         name,
         email,
         msg,

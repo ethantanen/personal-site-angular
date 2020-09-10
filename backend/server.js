@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + "/dist/personal-website"));
+app.use(express.static(__dirname + "/../frontend/dist/personal-website"));
 
 app.post("/email", async (req, res) => {
   const { email, name, msg } = req.body;
@@ -27,7 +27,7 @@ app.post("/email", async (req, res) => {
 });
 
 app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/dist/personal-website/index.html"));
+  res.sendFile(path.join(__dirname + "/../frontend/dist/personal-website"));
 });
 
 app.listen(process.env.PORT || 3000);
