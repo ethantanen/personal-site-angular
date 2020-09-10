@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  EMAIL_URL: 'http://localhost:3000/email',
+  EMAIL_URL: 'https://www.ethantanen.com/email',
 };
 
 /*
