@@ -1,20 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PersonalWebsite</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="assets/shrimp.png" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NFE02KV6QE"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="utf-8">
-  <title>PersonalWebsite</title>
-  <base href="/">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-  <link rel="icon"
-        type="image/x-icon"
-        href="assets/shrimp.png">
+      gtag("config", "G-NFE02KV6QE");
+    </script>
+  </head>
 
-</head>
-
-<body>
-  <app-root></app-root>
-</body>
-
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

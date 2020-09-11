@@ -487,8 +487,8 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/etanen/Desktop/personal-website/frontend/src/styles.scss */"./src/styles.scss");
-module.exports = __webpack_require__(/*! /Users/etanen/Desktop/personal-website/frontend/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! /Users/ethantanen/Desktop/personal-site-angular/frontend/src/styles.scss */"./src/styles.scss");
+module.exports = __webpack_require__(/*! /Users/ethantanen/Desktop/personal-site-angular/frontend/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
 
 
 /***/ })

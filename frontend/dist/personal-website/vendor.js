@@ -103,7 +103,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵsetRootDomAdapter", function() { return setRootDomAdapter; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /**
- * @license Angular v10.0.14
+ * @license Angular v10.1.1
  * (c) 2010-2020 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -1985,8 +1985,10 @@ function weekGetter(size, monthBased = false) {
             result = 1 + Math.floor((today + nbDaysBefore1stDayOfMonth) / 7);
         }
         else {
-            const firstThurs = getFirstThursdayOfYear(date.getFullYear());
             const thisThurs = getThursdayThisWeek(date);
+            // Some days of a year are part of next year according to ISO 8601.
+            // Compute the firstThurs from the year of this week's Thursday
+            const firstThurs = getFirstThursdayOfYear(thisThurs.getFullYear());
             const diff = thisThurs.getTime() - firstThurs.getTime();
             result = 1 + Math.round(diff / 6.048e8); // 6.048e8 ms per week
         }
@@ -4370,7 +4372,7 @@ class AsyncPipe {
         }
     }
 }
-AsyncPipe.ɵfac = function AsyncPipe_Factory(t) { return new (t || AsyncPipe)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinjectPipeChangeDetectorRef"]()); };
+AsyncPipe.ɵfac = function AsyncPipe_Factory(t) { return new (t || AsyncPipe)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"])); };
 AsyncPipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({ name: "async", type: AsyncPipe, pure: false });
 AsyncPipe.ctorParameters = () => [
     { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }
@@ -4847,8 +4849,8 @@ function makeKeyValuePair(key, value) {
  * @usageNotes
  * ### Examples
  *
- * This examples show how an Object or a Map can be iterated by ngFor with the use of this keyvalue
- * pipe.
+ * This examples show how an Object or a Map can be iterated by ngFor with the use of this
+ * keyvalue pipe.
  *
  * {@example common/pipes/ts/keyvalue_pipe.ts region='KeyValuePipe'}
  *
@@ -5386,7 +5388,7 @@ function isPlatformWorkerUi(platformId) {
 /**
  * @publicApi
  */
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('10.0.14');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('10.1.1');
 
 /**
  * @license
@@ -5630,7 +5632,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 /**
- * @license Angular v10.0.14
+ * @license Angular v10.1.1
  * (c) 2010-2020 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -7778,7 +7780,7 @@ HttpClientJsonpModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
 /*!******************************************************************!*\
   !*** ./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js ***!
   \******************************************************************/
-/*! exports provided: ANALYZE_FOR_ENTRY_COMPONENTS, APP_BOOTSTRAP_LISTENER, APP_ID, APP_INITIALIZER, ApplicationInitStatus, ApplicationModule, ApplicationRef, Attribute, COMPILER_OPTIONS, CUSTOM_ELEMENTS_SCHEMA, ChangeDetectionStrategy, ChangeDetectorRef, Compiler, CompilerFactory, Component, ComponentFactory, ComponentFactoryResolver, ComponentRef, ContentChild, ContentChildren, DEFAULT_CURRENCY_CODE, DebugElement, DebugEventListener, DebugNode, DefaultIterableDiffer, Directive, ElementRef, EmbeddedViewRef, ErrorHandler, EventEmitter, Host, HostBinding, HostListener, INJECTOR, Inject, InjectFlags, Injectable, InjectionToken, Injector, Input, IterableDiffers, KeyValueDiffers, LOCALE_ID, MissingTranslationStrategy, ModuleWithComponentFactories, NO_ERRORS_SCHEMA, NgModule, NgModuleFactory, NgModuleFactoryLoader, NgModuleRef, NgProbeToken, NgZone, Optional, Output, PACKAGE_ROOT_URL, PLATFORM_ID, PLATFORM_INITIALIZER, Pipe, PlatformRef, Query, QueryList, ReflectiveInjector, ReflectiveKey, Renderer2, RendererFactory2, RendererStyleFlags2, ResolvedReflectiveFactory, Sanitizer, SecurityContext, Self, SimpleChange, SkipSelf, SystemJsNgModuleLoader, SystemJsNgModuleLoaderConfig, TRANSLATIONS, TRANSLATIONS_FORMAT, TemplateRef, Testability, TestabilityRegistry, Type, VERSION, Version, ViewChild, ViewChildren, ViewContainerRef, ViewEncapsulation, ViewRef, WrappedValue, asNativeElements, assertPlatform, createPlatform, createPlatformFactory, defineInjectable, destroyPlatform, enableProdMode, forwardRef, getDebugNode, getModuleFactory, getPlatform, inject, isDevMode, platformCore, resolveForwardRef, setTestabilityGetter, ɵ0, ɵ1, ɵALLOW_MULTIPLE_PLATFORMS, ɵAPP_ID_RANDOM_PROVIDER, ɵChangeDetectorStatus, ɵCodegenComponentFactoryResolver, ɵCompiler_compileModuleAndAllComponentsAsync__POST_R3__, ɵCompiler_compileModuleAndAllComponentsSync__POST_R3__, ɵCompiler_compileModuleAsync__POST_R3__, ɵCompiler_compileModuleSync__POST_R3__, ɵComponentFactory, ɵConsole, ɵDEFAULT_LOCALE_ID, ɵEMPTY_ARRAY, ɵEMPTY_MAP, ɵINJECTOR_IMPL__POST_R3__, ɵINJECTOR_SCOPE, ɵLifecycleHooksFeature, ɵLocaleDataIndex, ɵNG_COMP_DEF, ɵNG_DIR_DEF, ɵNG_ELEMENT_ID, ɵNG_INJ_DEF, ɵNG_MOD_DEF, ɵNG_PIPE_DEF, ɵNG_PROV_DEF, ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR, ɵNO_CHANGE, ɵNgModuleFactory, ɵNoopNgZone, ɵReflectionCapabilities, ɵRender3ComponentFactory, ɵRender3ComponentRef, ɵRender3NgModuleRef, ɵSWITCH_CHANGE_DETECTOR_REF_FACTORY__POST_R3__, ɵSWITCH_COMPILE_COMPONENT__POST_R3__, ɵSWITCH_COMPILE_DIRECTIVE__POST_R3__, ɵSWITCH_COMPILE_INJECTABLE__POST_R3__, ɵSWITCH_COMPILE_NGMODULE__POST_R3__, ɵSWITCH_COMPILE_PIPE__POST_R3__, ɵSWITCH_ELEMENT_REF_FACTORY__POST_R3__, ɵSWITCH_IVY_ENABLED__POST_R3__, ɵSWITCH_RENDERER2_FACTORY__POST_R3__, ɵSWITCH_TEMPLATE_REF_FACTORY__POST_R3__, ɵSWITCH_VIEW_CONTAINER_REF_FACTORY__POST_R3__, ɵ_sanitizeHtml, ɵ_sanitizeUrl, ɵallowSanitizationBypassAndThrow, ɵand, ɵangular_packages_core_core_a, ɵangular_packages_core_core_b, ɵangular_packages_core_core_ba, ɵangular_packages_core_core_bb, ɵangular_packages_core_core_bc, ɵangular_packages_core_core_bd, ɵangular_packages_core_core_be, ɵangular_packages_core_core_bg, ɵangular_packages_core_core_bh, ɵangular_packages_core_core_bi, ɵangular_packages_core_core_bj, ɵangular_packages_core_core_bk, ɵangular_packages_core_core_bl, ɵangular_packages_core_core_bm, ɵangular_packages_core_core_bn, ɵangular_packages_core_core_bo, ɵangular_packages_core_core_bq, ɵangular_packages_core_core_br, ɵangular_packages_core_core_c, ɵangular_packages_core_core_d, ɵangular_packages_core_core_e, ɵangular_packages_core_core_f, ɵangular_packages_core_core_g, ɵangular_packages_core_core_h, ɵangular_packages_core_core_i, ɵangular_packages_core_core_j, ɵangular_packages_core_core_k, ɵangular_packages_core_core_l, ɵangular_packages_core_core_m, ɵangular_packages_core_core_n, ɵangular_packages_core_core_o, ɵangular_packages_core_core_p, ɵangular_packages_core_core_q, ɵangular_packages_core_core_r, ɵangular_packages_core_core_s, ɵangular_packages_core_core_t, ɵangular_packages_core_core_u, ɵangular_packages_core_core_v, ɵangular_packages_core_core_w, ɵangular_packages_core_core_x, ɵangular_packages_core_core_y, ɵangular_packages_core_core_z, ɵbypassSanitizationTrustHtml, ɵbypassSanitizationTrustResourceUrl, ɵbypassSanitizationTrustScript, ɵbypassSanitizationTrustStyle, ɵbypassSanitizationTrustUrl, ɵccf, ɵclearOverrides, ɵclearResolutionOfComponentResourcesQueue, ɵcmf, ɵcompileComponent, ɵcompileDirective, ɵcompileNgModule, ɵcompileNgModuleDefs, ɵcompileNgModuleFactory__POST_R3__, ɵcompilePipe, ɵcreateInjector, ɵcrt, ɵdefaultIterableDiffers, ɵdefaultKeyValueDiffers, ɵdetectChanges, ɵdevModeEqual, ɵdid, ɵeld, ɵfindLocaleData, ɵflushModuleScopingQueueAsMuchAsPossible, ɵgetComponentViewDefinitionFactory, ɵgetDebugNodeR2, ɵgetDebugNode__POST_R3__, ɵgetDirectives, ɵgetHostElement, ɵgetInjectableDef, ɵgetLContext, ɵgetLocaleCurrencyCode, ɵgetLocalePluralCase, ɵgetModuleFactory__POST_R3__, ɵgetSanitizationBypassType, ɵglobal, ɵinitServicesIfNeeded, ɵinlineInterpolate, ɵinterpolate, ɵisBoundToModule__POST_R3__, ɵisDefaultChangeDetectionStrategy, ɵisListLikeIterable, ɵisObservable, ɵisPromise, ɵivyEnabled, ɵmakeDecorator, ɵmarkDirty, ɵmod, ɵmpd, ɵncd, ɵnoSideEffects, ɵnov, ɵoverrideComponentView, ɵoverrideProvider, ɵpad, ɵpatchComponentDefWithScope, ɵpid, ɵpod, ɵppd, ɵprd, ɵpublishDefaultGlobalUtils, ɵpublishGlobalUtil, ɵqud, ɵregisterLocaleData, ɵregisterModuleFactory, ɵregisterNgModuleType, ɵrenderComponent, ɵresetCompiledComponents, ɵresetJitOptions, ɵresolveComponentResources, ɵsetClassMetadata, ɵsetCurrentInjector, ɵsetDocument, ɵsetLocaleId, ɵstore, ɵstringify, ɵted, ɵtransitiveScopesFor, ɵunregisterLocaleData, ɵunv, ɵunwrapSafeValue, ɵvid, ɵwhenRendered, ɵɵCopyDefinitionFeature, ɵɵInheritDefinitionFeature, ɵɵNgOnChangesFeature, ɵɵProvidersFeature, ɵɵadvance, ɵɵattribute, ɵɵattributeInterpolate1, ɵɵattributeInterpolate2, ɵɵattributeInterpolate3, ɵɵattributeInterpolate4, ɵɵattributeInterpolate5, ɵɵattributeInterpolate6, ɵɵattributeInterpolate7, ɵɵattributeInterpolate8, ɵɵattributeInterpolateV, ɵɵclassMap, ɵɵclassMapInterpolate1, ɵɵclassMapInterpolate2, ɵɵclassMapInterpolate3, ɵɵclassMapInterpolate4, ɵɵclassMapInterpolate5, ɵɵclassMapInterpolate6, ɵɵclassMapInterpolate7, ɵɵclassMapInterpolate8, ɵɵclassMapInterpolateV, ɵɵclassProp, ɵɵcontentQuery, ɵɵdefineComponent, ɵɵdefineDirective, ɵɵdefineInjectable, ɵɵdefineInjector, ɵɵdefineNgModule, ɵɵdefinePipe, ɵɵdirectiveInject, ɵɵdisableBindings, ɵɵelement, ɵɵelementContainer, ɵɵelementContainerEnd, ɵɵelementContainerStart, ɵɵelementEnd, ɵɵelementStart, ɵɵenableBindings, ɵɵgetCurrentView, ɵɵgetFactoryOf, ɵɵgetInheritedFactory, ɵɵhostProperty, ɵɵi18n, ɵɵi18nApply, ɵɵi18nAttributes, ɵɵi18nEnd, ɵɵi18nExp, ɵɵi18nPostprocess, ɵɵi18nStart, ɵɵinject, ɵɵinjectAttribute, ɵɵinjectPipeChangeDetectorRef, ɵɵinvalidFactory, ɵɵinvalidFactoryDep, ɵɵlistener, ɵɵloadQuery, ɵɵnamespaceHTML, ɵɵnamespaceMathML, ɵɵnamespaceSVG, ɵɵnextContext, ɵɵpipe, ɵɵpipeBind1, ɵɵpipeBind2, ɵɵpipeBind3, ɵɵpipeBind4, ɵɵpipeBindV, ɵɵprojection, ɵɵprojectionDef, ɵɵproperty, ɵɵpropertyInterpolate, ɵɵpropertyInterpolate1, ɵɵpropertyInterpolate2, ɵɵpropertyInterpolate3, ɵɵpropertyInterpolate4, ɵɵpropertyInterpolate5, ɵɵpropertyInterpolate6, ɵɵpropertyInterpolate7, ɵɵpropertyInterpolate8, ɵɵpropertyInterpolateV, ɵɵpureFunction0, ɵɵpureFunction1, ɵɵpureFunction2, ɵɵpureFunction3, ɵɵpureFunction4, ɵɵpureFunction5, ɵɵpureFunction6, ɵɵpureFunction7, ɵɵpureFunction8, ɵɵpureFunctionV, ɵɵqueryRefresh, ɵɵreference, ɵɵresolveBody, ɵɵresolveDocument, ɵɵresolveWindow, ɵɵrestoreView, ɵɵsanitizeHtml, ɵɵsanitizeResourceUrl, ɵɵsanitizeScript, ɵɵsanitizeStyle, ɵɵsanitizeUrl, ɵɵsanitizeUrlOrResourceUrl, ɵɵselect, ɵɵsetComponentScope, ɵɵsetNgModuleScope, ɵɵstaticContentQuery, ɵɵstaticViewQuery, ɵɵstyleMap, ɵɵstyleMapInterpolate1, ɵɵstyleMapInterpolate2, ɵɵstyleMapInterpolate3, ɵɵstyleMapInterpolate4, ɵɵstyleMapInterpolate5, ɵɵstyleMapInterpolate6, ɵɵstyleMapInterpolate7, ɵɵstyleMapInterpolate8, ɵɵstyleMapInterpolateV, ɵɵstyleProp, ɵɵstylePropInterpolate1, ɵɵstylePropInterpolate2, ɵɵstylePropInterpolate3, ɵɵstylePropInterpolate4, ɵɵstylePropInterpolate5, ɵɵstylePropInterpolate6, ɵɵstylePropInterpolate7, ɵɵstylePropInterpolate8, ɵɵstylePropInterpolateV, ɵɵsyntheticHostListener, ɵɵsyntheticHostProperty, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵɵtext, ɵɵtextInterpolate, ɵɵtextInterpolate1, ɵɵtextInterpolate2, ɵɵtextInterpolate3, ɵɵtextInterpolate4, ɵɵtextInterpolate5, ɵɵtextInterpolate6, ɵɵtextInterpolate7, ɵɵtextInterpolate8, ɵɵtextInterpolateV, ɵɵviewQuery */
+/*! exports provided: ANALYZE_FOR_ENTRY_COMPONENTS, APP_BOOTSTRAP_LISTENER, APP_ID, APP_INITIALIZER, ApplicationInitStatus, ApplicationModule, ApplicationRef, Attribute, COMPILER_OPTIONS, CUSTOM_ELEMENTS_SCHEMA, ChangeDetectionStrategy, ChangeDetectorRef, Compiler, CompilerFactory, Component, ComponentFactory, ComponentFactoryResolver, ComponentRef, ContentChild, ContentChildren, DEFAULT_CURRENCY_CODE, DebugElement, DebugEventListener, DebugNode, DefaultIterableDiffer, Directive, ElementRef, EmbeddedViewRef, ErrorHandler, EventEmitter, Host, HostBinding, HostListener, INJECTOR, Inject, InjectFlags, Injectable, InjectionToken, Injector, Input, IterableDiffers, KeyValueDiffers, LOCALE_ID, MissingTranslationStrategy, ModuleWithComponentFactories, NO_ERRORS_SCHEMA, NgModule, NgModuleFactory, NgModuleFactoryLoader, NgModuleRef, NgProbeToken, NgZone, Optional, Output, PACKAGE_ROOT_URL, PLATFORM_ID, PLATFORM_INITIALIZER, Pipe, PlatformRef, Query, QueryList, ReflectiveInjector, ReflectiveKey, Renderer2, RendererFactory2, RendererStyleFlags2, ResolvedReflectiveFactory, Sanitizer, SecurityContext, Self, SimpleChange, SkipSelf, SystemJsNgModuleLoader, SystemJsNgModuleLoaderConfig, TRANSLATIONS, TRANSLATIONS_FORMAT, TemplateRef, Testability, TestabilityRegistry, Type, VERSION, Version, ViewChild, ViewChildren, ViewContainerRef, ViewEncapsulation, ViewRef, WrappedValue, asNativeElements, assertPlatform, createPlatform, createPlatformFactory, defineInjectable, destroyPlatform, enableProdMode, forwardRef, getDebugNode, getModuleFactory, getPlatform, inject, isDevMode, platformCore, resolveForwardRef, setTestabilityGetter, ɵ0, ɵ1, ɵALLOW_MULTIPLE_PLATFORMS, ɵAPP_ID_RANDOM_PROVIDER, ɵChangeDetectorStatus, ɵCodegenComponentFactoryResolver, ɵCompiler_compileModuleAndAllComponentsAsync__POST_R3__, ɵCompiler_compileModuleAndAllComponentsSync__POST_R3__, ɵCompiler_compileModuleAsync__POST_R3__, ɵCompiler_compileModuleSync__POST_R3__, ɵComponentFactory, ɵConsole, ɵDEFAULT_LOCALE_ID, ɵEMPTY_ARRAY, ɵEMPTY_MAP, ɵINJECTOR_IMPL__POST_R3__, ɵINJECTOR_SCOPE, ɵLifecycleHooksFeature, ɵLocaleDataIndex, ɵNG_COMP_DEF, ɵNG_DIR_DEF, ɵNG_ELEMENT_ID, ɵNG_INJ_DEF, ɵNG_MOD_DEF, ɵNG_PIPE_DEF, ɵNG_PROV_DEF, ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR, ɵNO_CHANGE, ɵNgModuleFactory, ɵNoopNgZone, ɵReflectionCapabilities, ɵRender3ComponentFactory, ɵRender3ComponentRef, ɵRender3NgModuleRef, ɵSWITCH_CHANGE_DETECTOR_REF_FACTORY__POST_R3__, ɵSWITCH_COMPILE_COMPONENT__POST_R3__, ɵSWITCH_COMPILE_DIRECTIVE__POST_R3__, ɵSWITCH_COMPILE_INJECTABLE__POST_R3__, ɵSWITCH_COMPILE_NGMODULE__POST_R3__, ɵSWITCH_COMPILE_PIPE__POST_R3__, ɵSWITCH_ELEMENT_REF_FACTORY__POST_R3__, ɵSWITCH_IVY_ENABLED__POST_R3__, ɵSWITCH_RENDERER2_FACTORY__POST_R3__, ɵSWITCH_TEMPLATE_REF_FACTORY__POST_R3__, ɵSWITCH_VIEW_CONTAINER_REF_FACTORY__POST_R3__, ɵ_sanitizeHtml, ɵ_sanitizeUrl, ɵallowSanitizationBypassAndThrow, ɵand, ɵangular_packages_core_core_a, ɵangular_packages_core_core_b, ɵangular_packages_core_core_ba, ɵangular_packages_core_core_bb, ɵangular_packages_core_core_bc, ɵangular_packages_core_core_bd, ɵangular_packages_core_core_be, ɵangular_packages_core_core_bg, ɵangular_packages_core_core_bh, ɵangular_packages_core_core_bi, ɵangular_packages_core_core_bj, ɵangular_packages_core_core_bk, ɵangular_packages_core_core_bl, ɵangular_packages_core_core_bm, ɵangular_packages_core_core_bn, ɵangular_packages_core_core_bo, ɵangular_packages_core_core_bq, ɵangular_packages_core_core_br, ɵangular_packages_core_core_c, ɵangular_packages_core_core_d, ɵangular_packages_core_core_e, ɵangular_packages_core_core_f, ɵangular_packages_core_core_g, ɵangular_packages_core_core_h, ɵangular_packages_core_core_i, ɵangular_packages_core_core_j, ɵangular_packages_core_core_k, ɵangular_packages_core_core_l, ɵangular_packages_core_core_m, ɵangular_packages_core_core_n, ɵangular_packages_core_core_o, ɵangular_packages_core_core_p, ɵangular_packages_core_core_q, ɵangular_packages_core_core_r, ɵangular_packages_core_core_s, ɵangular_packages_core_core_t, ɵangular_packages_core_core_u, ɵangular_packages_core_core_v, ɵangular_packages_core_core_w, ɵangular_packages_core_core_x, ɵangular_packages_core_core_y, ɵangular_packages_core_core_z, ɵbypassSanitizationTrustHtml, ɵbypassSanitizationTrustResourceUrl, ɵbypassSanitizationTrustScript, ɵbypassSanitizationTrustStyle, ɵbypassSanitizationTrustUrl, ɵccf, ɵclearOverrides, ɵclearResolutionOfComponentResourcesQueue, ɵcmf, ɵcompileComponent, ɵcompileDirective, ɵcompileNgModule, ɵcompileNgModuleDefs, ɵcompileNgModuleFactory__POST_R3__, ɵcompilePipe, ɵcreateInjector, ɵcrt, ɵdefaultIterableDiffers, ɵdefaultKeyValueDiffers, ɵdetectChanges, ɵdevModeEqual, ɵdid, ɵeld, ɵfindLocaleData, ɵflushModuleScopingQueueAsMuchAsPossible, ɵgetComponentViewDefinitionFactory, ɵgetDebugNodeR2, ɵgetDebugNode__POST_R3__, ɵgetDirectives, ɵgetHostElement, ɵgetInjectableDef, ɵgetLContext, ɵgetLocaleCurrencyCode, ɵgetLocalePluralCase, ɵgetModuleFactory__POST_R3__, ɵgetSanitizationBypassType, ɵglobal, ɵinitServicesIfNeeded, ɵinlineInterpolate, ɵinterpolate, ɵisBoundToModule__POST_R3__, ɵisDefaultChangeDetectionStrategy, ɵisListLikeIterable, ɵisObservable, ɵisPromise, ɵivyEnabled, ɵmakeDecorator, ɵmarkDirty, ɵmod, ɵmpd, ɵncd, ɵnoSideEffects, ɵnov, ɵoverrideComponentView, ɵoverrideProvider, ɵpad, ɵpatchComponentDefWithScope, ɵpid, ɵpod, ɵppd, ɵprd, ɵpublishDefaultGlobalUtils, ɵpublishGlobalUtil, ɵqud, ɵregisterLocaleData, ɵregisterModuleFactory, ɵregisterNgModuleType, ɵrenderComponent, ɵresetCompiledComponents, ɵresetJitOptions, ɵresolveComponentResources, ɵsetClassMetadata, ɵsetCurrentInjector, ɵsetDocument, ɵsetLocaleId, ɵstore, ɵstringify, ɵted, ɵtransitiveScopesFor, ɵunregisterLocaleData, ɵunv, ɵunwrapSafeValue, ɵvid, ɵwhenRendered, ɵɵCopyDefinitionFeature, ɵɵInheritDefinitionFeature, ɵɵNgOnChangesFeature, ɵɵProvidersFeature, ɵɵadvance, ɵɵattribute, ɵɵattributeInterpolate1, ɵɵattributeInterpolate2, ɵɵattributeInterpolate3, ɵɵattributeInterpolate4, ɵɵattributeInterpolate5, ɵɵattributeInterpolate6, ɵɵattributeInterpolate7, ɵɵattributeInterpolate8, ɵɵattributeInterpolateV, ɵɵclassMap, ɵɵclassMapInterpolate1, ɵɵclassMapInterpolate2, ɵɵclassMapInterpolate3, ɵɵclassMapInterpolate4, ɵɵclassMapInterpolate5, ɵɵclassMapInterpolate6, ɵɵclassMapInterpolate7, ɵɵclassMapInterpolate8, ɵɵclassMapInterpolateV, ɵɵclassProp, ɵɵcontentQuery, ɵɵdefineComponent, ɵɵdefineDirective, ɵɵdefineInjectable, ɵɵdefineInjector, ɵɵdefineNgModule, ɵɵdefinePipe, ɵɵdirectiveInject, ɵɵdisableBindings, ɵɵelement, ɵɵelementContainer, ɵɵelementContainerEnd, ɵɵelementContainerStart, ɵɵelementEnd, ɵɵelementStart, ɵɵenableBindings, ɵɵgetCurrentView, ɵɵgetFactoryOf, ɵɵgetInheritedFactory, ɵɵhostProperty, ɵɵi18n, ɵɵi18nApply, ɵɵi18nAttributes, ɵɵi18nEnd, ɵɵi18nExp, ɵɵi18nPostprocess, ɵɵi18nStart, ɵɵinject, ɵɵinjectAttribute, ɵɵinjectPipeChangeDetectorRef, ɵɵinvalidFactory, ɵɵinvalidFactoryDep, ɵɵlistener, ɵɵloadQuery, ɵɵnamespaceHTML, ɵɵnamespaceMathML, ɵɵnamespaceSVG, ɵɵnextContext, ɵɵpipe, ɵɵpipeBind1, ɵɵpipeBind2, ɵɵpipeBind3, ɵɵpipeBind4, ɵɵpipeBindV, ɵɵprojection, ɵɵprojectionDef, ɵɵproperty, ɵɵpropertyInterpolate, ɵɵpropertyInterpolate1, ɵɵpropertyInterpolate2, ɵɵpropertyInterpolate3, ɵɵpropertyInterpolate4, ɵɵpropertyInterpolate5, ɵɵpropertyInterpolate6, ɵɵpropertyInterpolate7, ɵɵpropertyInterpolate8, ɵɵpropertyInterpolateV, ɵɵpureFunction0, ɵɵpureFunction1, ɵɵpureFunction2, ɵɵpureFunction3, ɵɵpureFunction4, ɵɵpureFunction5, ɵɵpureFunction6, ɵɵpureFunction7, ɵɵpureFunction8, ɵɵpureFunctionV, ɵɵqueryRefresh, ɵɵreference, ɵɵresolveBody, ɵɵresolveDocument, ɵɵresolveWindow, ɵɵrestoreView, ɵɵsanitizeHtml, ɵɵsanitizeResourceUrl, ɵɵsanitizeScript, ɵɵsanitizeStyle, ɵɵsanitizeUrl, ɵɵsanitizeUrlOrResourceUrl, ɵɵsetComponentScope, ɵɵsetNgModuleScope, ɵɵstaticContentQuery, ɵɵstaticViewQuery, ɵɵstyleMap, ɵɵstyleMapInterpolate1, ɵɵstyleMapInterpolate2, ɵɵstyleMapInterpolate3, ɵɵstyleMapInterpolate4, ɵɵstyleMapInterpolate5, ɵɵstyleMapInterpolate6, ɵɵstyleMapInterpolate7, ɵɵstyleMapInterpolate8, ɵɵstyleMapInterpolateV, ɵɵstyleProp, ɵɵstylePropInterpolate1, ɵɵstylePropInterpolate2, ɵɵstylePropInterpolate3, ɵɵstylePropInterpolate4, ɵɵstylePropInterpolate5, ɵɵstylePropInterpolate6, ɵɵstylePropInterpolate7, ɵɵstylePropInterpolate8, ɵɵstylePropInterpolateV, ɵɵsyntheticHostListener, ɵɵsyntheticHostProperty, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵɵtext, ɵɵtextInterpolate, ɵɵtextInterpolate1, ɵɵtextInterpolate2, ɵɵtextInterpolate3, ɵɵtextInterpolate4, ɵɵtextInterpolate5, ɵɵtextInterpolate6, ɵɵtextInterpolate7, ɵɵtextInterpolate8, ɵɵtextInterpolateV, ɵɵviewQuery */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8167,7 +8169,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵɵsanitizeStyle", function() { return ɵɵsanitizeStyle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵɵsanitizeUrl", function() { return ɵɵsanitizeUrl; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵɵsanitizeUrlOrResourceUrl", function() { return ɵɵsanitizeUrlOrResourceUrl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵɵselect", function() { return ɵɵselect; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵɵsetComponentScope", function() { return ɵɵsetComponentScope; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵɵsetNgModuleScope", function() { return ɵɵsetNgModuleScope; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵɵstaticContentQuery", function() { return ɵɵstaticContentQuery; });
@@ -8211,7 +8212,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /**
- * @license Angular v10.0.14
+ * @license Angular v10.1.1
  * (c) 2010-2020 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -12824,7 +12825,7 @@ function isDOMParserAvailable() {
  *
  * This regular expression was taken from the Closure sanitization library.
  */
-const SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
+const SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file|sms):|[^&:/?#]*(?:[/?#]|$))/gi;
 /* A pattern that matches safe srcset values */
 const SAFE_SRCSET_PATTERN = /^(?:(?:https?|file):|[^&:/?#]*(?:[/?#]|$))/gi;
 /** A pattern that matches safe data URLs. Only matches image, video and audio types. */
@@ -14364,15 +14365,6 @@ function ɵɵadvance(delta) {
     ngDevMode && assertGreaterThan(delta, 0, 'Can only advance forward');
     selectIndexInternal(getTView(), getLView(), getSelectedIndex() + delta, getCheckNoChangesMode());
 }
-/**
- * Selects an element for later binding instructions.
- * @deprecated No longer being generated, but still used in unit tests.
- * @codeGenApi
- */
-function ɵɵselect(index) {
-    // TODO(misko): Remove this function as it is no longer being used.
-    selectIndexInternal(getTView(), getLView(), index, getCheckNoChangesMode());
-}
 function selectIndexInternal(tView, lView, index, checkNoChangesMode) {
     ngDevMode && assertGreaterThan(index, -1, 'Invalid index');
     ngDevMode && assertIndexInRange(lView, index + HEADER_OFFSET);
@@ -15589,7 +15581,7 @@ function getOrCreateTComponentView(def) {
  * @param schemas Schemas for this view
  * @param consts Constants for this view
  */
-function createTView(type, viewIndex, templateFn, decls, vars, directives, pipes, viewQuery, schemas, consts) {
+function createTView(type, viewIndex, templateFn, decls, vars, directives, pipes, viewQuery, schemas, constsOrFactory) {
     ngDevMode && ngDevMode.tView++;
     const bindingStartIndex = HEADER_OFFSET + decls;
     // This length does not yet contain host bindings from child directives because at this point,
@@ -15597,6 +15589,7 @@ function createTView(type, viewIndex, templateFn, decls, vars, directives, pipes
     // that has a host binding, we will update the blueprint with that def's hostVars count.
     const initialViewLength = bindingStartIndex + vars;
     const blueprint = createViewBlueprint(bindingStartIndex, initialViewLength);
+    const consts = typeof constsOrFactory === 'function' ? constsOrFactory() : constsOrFactory;
     const tView = blueprint[TVIEW] = ngDevMode ?
         new TViewConstructor(type, viewIndex, // id: number,
         blueprint, // blueprint: LView,
@@ -16256,11 +16249,12 @@ function findDirectiveDefMatches(tView, viewData, tNode) {
                 matches || (matches = ngDevMode ? new MatchesArray() : []);
                 diPublicInInjector(getOrCreateNodeInjectorForNode(tNode, viewData), tView, def.type);
                 if (isComponentDef(def)) {
-                    ngDevMode &&
+                    if (ngDevMode) {
                         assertNodeOfPossibleTypes(tNode, [3 /* Element */], `"${tNode.tagName}" tags cannot be used as component hosts. ` +
                             `Please use a different tag to activate the ${stringify(def.type)} component.`);
-                    if (tNode.flags & 2 /* isComponentHost */)
-                        throwMultipleComponentError(tNode);
+                        if (tNode.flags & 2 /* isComponentHost */)
+                            throwMultipleComponentError(tNode);
+                    }
                     markAsComponentHost(tView, tNode);
                     // The component is always stored first with directives after.
                     matches.unshift(def);
@@ -19432,7 +19426,7 @@ class R3Injector {
             let multiRecord = this.records.get(token);
             if (multiRecord) {
                 // It has. Throw a nice error if
-                if (multiRecord.multi === undefined) {
+                if (ngDevMode && multiRecord.multi === undefined) {
                     throwMixedMultiProviderError();
                 }
             }
@@ -19446,14 +19440,14 @@ class R3Injector {
         }
         else {
             const existing = this.records.get(token);
-            if (existing && existing.multi !== undefined) {
+            if (ngDevMode && existing && existing.multi !== undefined) {
                 throwMixedMultiProviderError();
             }
         }
         this.records.set(token, record);
     }
     hydrate(token, record) {
-        if (record.value === CIRCULAR) {
+        if (ngDevMode && record.value === CIRCULAR) {
             throwCyclicDependencyError(stringify(token));
         }
         else if (record.value === NOT_YET) {
@@ -19555,7 +19549,7 @@ function providerToFactory(provider, ngModuleType, providers) {
         else {
             const classRef = resolveForwardRef(provider &&
                 (provider.useClass || provider.provide));
-            if (!classRef) {
+            if (ngDevMode && !classRef) {
                 throwInvalidProviderError(ngModuleType, providers, provider);
             }
             if (hasDeps(provider)) {
@@ -27422,7 +27416,7 @@ class Version {
 /**
  * @publicApi
  */
-const VERSION = new Version('10.0.14');
+const VERSION = new Version('10.1.1');
 
 /**
  * @license
@@ -32134,14 +32128,15 @@ function i18nPostprocess(message, replacements = {}) {
  *   `template` instruction index. A `block` that matches the sub-template in which it was declared.
  *
  * @param index A unique index of the translation in the static block.
- * @param message The translation message.
+ * @param messageIndex An index of the translation message from the `def.consts` array.
  * @param subTemplateIndex Optional sub-template index in the `message`.
  *
  * @codeGenApi
  */
-function ɵɵi18nStart(index, message, subTemplateIndex) {
+function ɵɵi18nStart(index, messageIndex, subTemplateIndex) {
     const tView = getTView();
     ngDevMode && assertDefined(tView, `tView should be defined`);
+    const message = getConstant(tView.consts, messageIndex);
     pushI18nIndex(index);
     // We need to delay projections until `i18nEnd`
     setDelayProjection(true);
@@ -32184,13 +32179,13 @@ function ɵɵi18nEnd() {
  *   `template` instruction index. A `block` that matches the sub-template in which it was declared.
  *
  * @param index A unique index of the translation in the static block.
- * @param message The translation message.
+ * @param messageIndex An index of the translation message from the `def.consts` array.
  * @param subTemplateIndex Optional sub-template index in the `message`.
  *
  * @codeGenApi
  */
-function ɵɵi18n(index, message, subTemplateIndex) {
-    ɵɵi18nStart(index, message, subTemplateIndex);
+function ɵɵi18n(index, messageIndex, subTemplateIndex) {
+    ɵɵi18nStart(index, messageIndex, subTemplateIndex);
     ɵɵi18nEnd();
 }
 /**
@@ -32201,11 +32196,12 @@ function ɵɵi18n(index, message, subTemplateIndex) {
  *
  * @codeGenApi
  */
-function ɵɵi18nAttributes(index, values) {
+function ɵɵi18nAttributes(index, attrsIndex) {
     const lView = getLView();
     const tView = getTView();
     ngDevMode && assertDefined(tView, `tView should be defined`);
-    i18nAttributesFirstPass(lView, tView, index, values);
+    const attrs = getConstant(tView.consts, attrsIndex);
+    i18nAttributesFirstPass(lView, tView, index, attrs);
 }
 /**
  * Stores the values of the bindings during each update cycle in order to determine if we need to
@@ -33868,7 +33864,6 @@ const ɵ0$d = () => ({
     'ɵɵstylePropInterpolate8': ɵɵstylePropInterpolate8,
     'ɵɵstylePropInterpolateV': ɵɵstylePropInterpolateV,
     'ɵɵclassProp': ɵɵclassProp,
-    'ɵɵselect': ɵɵselect,
     'ɵɵadvance': ɵɵadvance,
     'ɵɵtemplate': ɵɵtemplate,
     'ɵɵtext': ɵɵtext,
@@ -40073,7 +40068,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /**
- * @license Angular v10.0.14
+ * @license Angular v10.1.1
  * (c) 2010-2020 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -40140,46 +40135,40 @@ class CheckboxControlValueAccessor {
         this._renderer = _renderer;
         this._elementRef = _elementRef;
         /**
-         * @description
          * The registered callback function called when a change event occurs on the input element.
+         * @nodoc
          */
         this.onChange = (_) => { };
         /**
-         * @description
          * The registered callback function called when a blur event occurs on the input element.
+         * @nodoc
          */
         this.onTouched = () => { };
     }
     /**
      * Sets the "checked" property on the input element.
-     *
-     * @param value The checked value
+     * @nodoc
      */
     writeValue(value) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'checked', value);
     }
     /**
-     * @description
      * Registers a function called when the control value changes.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnChange(fn) {
         this.onChange = fn;
     }
     /**
-     * @description
      * Registers a function called when the control is touched.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnTouched(fn) {
         this.onTouched = fn;
     }
     /**
      * Sets the "disabled" property on the input element.
-     *
-     * @param isDisabled The disabled value
+     * @nodoc
      */
     setDisabledState(isDisabled) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
@@ -40260,13 +40249,13 @@ class DefaultValueAccessor {
         this._elementRef = _elementRef;
         this._compositionMode = _compositionMode;
         /**
-         * @description
          * The registered callback function called when an input event occurs on the input element.
+         * @nodoc
          */
         this.onChange = (_) => { };
         /**
-         * @description
          * The registered callback function called when a blur event occurs on the input element.
+         * @nodoc
          */
         this.onTouched = () => { };
         /** Whether the user is creating a composition string (IME events). */
@@ -40277,35 +40266,29 @@ class DefaultValueAccessor {
     }
     /**
      * Sets the "value" property on the input element.
-     *
-     * @param value The checked value
+     * @nodoc
      */
     writeValue(value) {
         const normalizedValue = value == null ? '' : value;
         this._renderer.setProperty(this._elementRef.nativeElement, 'value', normalizedValue);
     }
     /**
-     * @description
      * Registers a function called when the control value changes.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnChange(fn) {
         this.onChange = fn;
     }
     /**
-     * @description
      * Registers a function called when the control is touched.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnTouched(fn) {
         this.onTouched = fn;
     }
     /**
      * Sets the "disabled" property on the input element.
-     *
-     * @param isDisabled The disabled value
+     * @nodoc
      */
     setDisabledState(isDisabled) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
@@ -40614,7 +40597,9 @@ const ɵControlContainer_BaseFactory = /*@__PURE__*/ _angular_core__WEBPACK_IMPO
  * found in the LICENSE file at https://angular.io/license
  */
 function unimplemented() {
-    throw new Error('unimplemented');
+    if (typeof ngDevMode === 'undefined' || ngDevMode) {
+        throw new Error('unimplemented');
+    }
 }
 /**
  * @description
@@ -41225,7 +41210,7 @@ function isPresent(o) {
 }
 function toObservable(r) {
     const obs = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵisPromise"])(r) ? Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(r) : r;
-    if (!(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵisObservable"])(obs))) {
+    if (!(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵisObservable"])(obs)) && (typeof ngDevMode === 'undefined' || ngDevMode)) {
         throw new Error(`Expected validator to return Promise or Observable.`);
     }
     return obs;
@@ -41276,7 +41261,7 @@ const NUMBER_VALUE_ACCESSOR = {
 /**
  * @description
  * The `ControlValueAccessor` for writing a number value and listening to number input changes.
- * The value accessor is used by the `FormControlDirective`, `FormControlName`, and  `NgModel`
+ * The value accessor is used by the `FormControlDirective`, `FormControlName`, and `NgModel`
  * directives.
  *
  * @usageNotes
@@ -41302,21 +41287,20 @@ class NumberValueAccessor {
         this._renderer = _renderer;
         this._elementRef = _elementRef;
         /**
-         * @description
          * The registered callback function called when a change or input event occurs on the input
          * element.
+         * @nodoc
          */
         this.onChange = (_) => { };
         /**
-         * @description
          * The registered callback function called when a blur event occurs on the input element.
+         * @nodoc
          */
         this.onTouched = () => { };
     }
     /**
      * Sets the "value" property on the input element.
-     *
-     * @param value The checked value
+     * @nodoc
      */
     writeValue(value) {
         // The value needs to be normalized for IE9, otherwise it is set to 'null' when null
@@ -41324,10 +41308,8 @@ class NumberValueAccessor {
         this._renderer.setProperty(this._elementRef.nativeElement, 'value', normalizedValue);
     }
     /**
-     * @description
      * Registers a function called when the control value changes.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnChange(fn) {
         this.onChange = (value) => {
@@ -41335,18 +41317,15 @@ class NumberValueAccessor {
         };
     }
     /**
-     * @description
      * Registers a function called when the control is touched.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnTouched(fn) {
         this.onTouched = fn;
     }
     /**
      * Sets the "disabled" property on the input element.
-     *
-     * @param isDisabled The disabled value
+     * @nodoc
      */
     setDisabledState(isDisabled) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
@@ -41381,6 +41360,12 @@ const RADIO_VALUE_ACCESSOR = {
     useExisting: Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["forwardRef"])(() => RadioControlValueAccessor),
     multi: true
 };
+function throwNameError() {
+    throw new Error(`
+      If you define both a name and a formControlName attribute on your radio button, their values
+      must match. Ex: <input type="radio" formControlName="food" name="food">
+    `);
+}
 /**
  * @description
  * Class used by Angular to track radio buttons. For internal use only.
@@ -41458,47 +41443,37 @@ class RadioControlValueAccessor {
         this._registry = _registry;
         this._injector = _injector;
         /**
-         * @description
          * The registered callback function called when a change event occurs on the input element.
+         * @nodoc
          */
         this.onChange = () => { };
         /**
-         * @description
          * The registered callback function called when a blur event occurs on the input element.
+         * @nodoc
          */
         this.onTouched = () => { };
     }
-    /**
-     * @description
-     * A lifecycle method called when the directive is initialized. For internal use only.
-     */
+    /** @nodoc */
     ngOnInit() {
         this._control = this._injector.get(NgControl);
         this._checkName();
         this._registry.add(this._control, this);
     }
-    /**
-     * @description
-     * Lifecycle method called before the directive's instance is destroyed. For internal use only.
-     */
+    /** @nodoc */
     ngOnDestroy() {
         this._registry.remove(this);
     }
     /**
-     * @description
      * Sets the "checked" property value on the radio input element.
-     *
-     * @param value The checked value
+     * @nodoc
      */
     writeValue(value) {
         this._state = value === this.value;
         this._renderer.setProperty(this._elementRef.nativeElement, 'checked', this._state);
     }
     /**
-     * @description
      * Registers a function called when the control value changes.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnChange(fn) {
         this._fn = fn;
@@ -41516,34 +41491,26 @@ class RadioControlValueAccessor {
         this.writeValue(value);
     }
     /**
-     * @description
      * Registers a function called when the control is touched.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnTouched(fn) {
         this.onTouched = fn;
     }
     /**
      * Sets the "disabled" property on the input element.
-     *
-     * @param isDisabled The disabled value
+     * @nodoc
      */
     setDisabledState(isDisabled) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
     }
     _checkName() {
-        if (this.name && this.formControlName && this.name !== this.formControlName) {
-            this._throwNameError();
+        if (this.name && this.formControlName && this.name !== this.formControlName &&
+            (typeof ngDevMode === 'undefined' || ngDevMode)) {
+            throwNameError();
         }
         if (!this.name && this.formControlName)
             this.name = this.formControlName;
-    }
-    _throwNameError() {
-        throw new Error(`
-      If you define both a name and a formControlName attribute on your radio button, their values
-      must match. Ex: <input type="radio" formControlName="food" name="food">
-    `);
     }
 }
 RadioControlValueAccessor.ɵfac = function RadioControlValueAccessor_Factory(t) { return new (t || RadioControlValueAccessor)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer2"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](RadioControlRegistry), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"])); };
@@ -41617,30 +41584,27 @@ class RangeValueAccessor {
         this._renderer = _renderer;
         this._elementRef = _elementRef;
         /**
-         * @description
          * The registered callback function called when a change or input event occurs on the input
          * element.
+         * @nodoc
          */
         this.onChange = (_) => { };
         /**
-         * @description
          * The registered callback function called when a blur event occurs on the input element.
+         * @nodoc
          */
         this.onTouched = () => { };
     }
     /**
      * Sets the "value" property on the input element.
-     *
-     * @param value The checked value
+     * @nodoc
      */
     writeValue(value) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'value', parseFloat(value));
     }
     /**
-     * @description
      * Registers a function called when the control value changes.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnChange(fn) {
         this.onChange = (value) => {
@@ -41648,18 +41612,15 @@ class RangeValueAccessor {
         };
     }
     /**
-     * @description
      * Registers a function called when the control is touched.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnTouched(fn) {
         this.onTouched = fn;
     }
     /**
      * Sets the "disabled" property on the range input element.
-     *
-     * @param isDisabled The disabled value
+     * @nodoc
      */
     setDisabledState(isDisabled) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
@@ -41911,13 +41872,13 @@ class SelectControlValueAccessor {
         /** @internal */
         this._idCounter = 0;
         /**
-         * @description
          * The registered callback function called when a change event occurs on the input element.
+         * @nodoc
          */
         this.onChange = (_) => { };
         /**
-         * @description
          * The registered callback function called when a blur event occurs on the input element.
+         * @nodoc
          */
         this.onTouched = () => { };
         this._compareWith = Object.is;
@@ -41928,7 +41889,7 @@ class SelectControlValueAccessor {
      * checking for changes.
      */
     set compareWith(fn) {
-        if (typeof fn !== 'function') {
+        if (typeof fn !== 'function' && (typeof ngDevMode === 'undefined' || ngDevMode)) {
             throw new Error(`compareWith must be a function, but received ${JSON.stringify(fn)}`);
         }
         this._compareWith = fn;
@@ -41936,8 +41897,7 @@ class SelectControlValueAccessor {
     /**
      * Sets the "value" property on the input element. The "selectedIndex"
      * property is also set if an ID is provided on the option element.
-     *
-     * @param value The checked value
+     * @nodoc
      */
     writeValue(value) {
         this.value = value;
@@ -41949,10 +41909,8 @@ class SelectControlValueAccessor {
         this._renderer.setProperty(this._elementRef.nativeElement, 'value', valueString);
     }
     /**
-     * @description
      * Registers a function called when the control value changes.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnChange(fn) {
         this.onChange = (valueString) => {
@@ -41961,18 +41919,15 @@ class SelectControlValueAccessor {
         };
     }
     /**
-     * @description
      * Registers a function called when the control is touched.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnTouched(fn) {
         this.onTouched = fn;
     }
     /**
      * Sets the "disabled" property on the select input element.
-     *
-     * @param isDisabled The disabled value
+     * @nodoc
      */
     setDisabledState(isDisabled) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
@@ -42060,10 +42015,7 @@ class NgSelectOption {
     _setElementValue(value) {
         this._renderer.setProperty(this._element.nativeElement, 'value', value);
     }
-    /**
-     * @description
-     * Lifecycle method called before the directive's instance is destroyed. For internal use only.
-     */
+    /** @nodoc */
     ngOnDestroy() {
         if (this._select) {
             this._select._optionMap.delete(this.id);
@@ -42168,13 +42120,13 @@ class SelectMultipleControlValueAccessor {
         /** @internal */
         this._idCounter = 0;
         /**
-         * @description
          * The registered callback function called when a change event occurs on the input element.
+         * @nodoc
          */
         this.onChange = (_) => { };
         /**
-         * @description
          * The registered callback function called when a blur event occurs on the input element.
+         * @nodoc
          */
         this.onTouched = () => { };
         this._compareWith = Object.is;
@@ -42185,17 +42137,14 @@ class SelectMultipleControlValueAccessor {
      * checking for changes.
      */
     set compareWith(fn) {
-        if (typeof fn !== 'function') {
+        if (typeof fn !== 'function' && (typeof ngDevMode === 'undefined' || ngDevMode)) {
             throw new Error(`compareWith must be a function, but received ${JSON.stringify(fn)}`);
         }
         this._compareWith = fn;
     }
     /**
-     * @description
-     * Sets the "value" property on one or of more
-     * of the select's options.
-     *
-     * @param value The value
+     * Sets the "value" property on one or of more of the select's options.
+     * @nodoc
      */
     writeValue(value) {
         this.value = value;
@@ -42215,11 +42164,9 @@ class SelectMultipleControlValueAccessor {
         this._optionMap.forEach(optionSelectedStateSetter);
     }
     /**
-     * @description
      * Registers a function called when the control value changes
      * and writes an array of the selected options.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnChange(fn) {
         this.onChange = (_) => {
@@ -42248,18 +42195,15 @@ class SelectMultipleControlValueAccessor {
         };
     }
     /**
-     * @description
      * Registers a function called when the control is touched.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnTouched(fn) {
         this.onTouched = fn;
     }
     /**
      * Sets the "disabled" property on the select input element.
-     *
-     * @param isDisabled The disabled value
+     * @nodoc
      */
     setDisabledState(isDisabled) {
         this._renderer.setProperty(this._elementRef.nativeElement, 'disabled', isDisabled);
@@ -42359,10 +42303,7 @@ class ɵNgSelectMultipleOption {
     _setSelected(selected) {
         this._renderer.setProperty(this._element.nativeElement, 'selected', selected);
     }
-    /**
-     * @description
-     * Lifecycle method called before the directive's instance is destroyed. For internal use only.
-     */
+    /** @nodoc */
     ngOnDestroy() {
         if (this._select) {
             this._select._optionMap.delete(this.id);
@@ -42407,10 +42348,12 @@ function controlPath(name, parent) {
     return [...parent.path, name];
 }
 function setUpControl(control, dir) {
-    if (!control)
-        _throwError(dir, 'Cannot find control with');
-    if (!dir.valueAccessor)
-        _throwError(dir, 'No value accessor for form control with');
+    if (typeof ngDevMode === 'undefined' || ngDevMode) {
+        if (!control)
+            _throwError(dir, 'Cannot find control with');
+        if (!dir.valueAccessor)
+            _throwError(dir, 'No value accessor for form control with');
+    }
     control.validator = Validators.compose([control.validator, dir.validator]);
     control.asyncValidator = Validators.composeAsync([control.asyncValidator, dir.asyncValidator]);
     dir.valueAccessor.writeValue(control.value);
@@ -42433,8 +42376,13 @@ function setUpControl(control, dir) {
     });
 }
 function cleanUpControl(control, dir) {
-    dir.valueAccessor.registerOnChange(() => _noControlError(dir));
-    dir.valueAccessor.registerOnTouched(() => _noControlError(dir));
+    const noop = () => {
+        if (typeof ngDevMode === 'undefined' || ngDevMode) {
+            _noControlError(dir);
+        }
+    };
+    dir.valueAccessor.registerOnChange(noop);
+    dir.valueAccessor.registerOnTouched(noop);
     dir._rawValidators.forEach((validator) => {
         if (validator.registerOnValidatorChange) {
             validator.registerOnValidatorChange(null);
@@ -42483,7 +42431,7 @@ function setUpModelChangePipeline(control, dir) {
     });
 }
 function setUpFormContainer(control, dir) {
-    if (control == null)
+    if (control == null && (typeof ngDevMode === 'undefined' || ngDevMode))
         _throwError(dir, 'Cannot find control with');
     control.validator = Validators.compose([control.validator, dir.validator]);
     control.asyncValidator = Validators.composeAsync([control.asyncValidator, dir.asyncValidator]);
@@ -42546,7 +42494,7 @@ function syncPendingControls(form, directives) {
 function selectValueAccessor(dir, valueAccessors) {
     if (!valueAccessors)
         return null;
-    if (!Array.isArray(valueAccessors))
+    if (!Array.isArray(valueAccessors) && (typeof ngDevMode === 'undefined' || ngDevMode))
         _throwError(dir, 'Value accessor was not provided as an array for form control with');
     let defaultAccessor = undefined;
     let builtinAccessor = undefined;
@@ -42556,12 +42504,12 @@ function selectValueAccessor(dir, valueAccessors) {
             defaultAccessor = v;
         }
         else if (isBuiltInAccessor(v)) {
-            if (builtinAccessor)
+            if (builtinAccessor && (typeof ngDevMode === 'undefined' || ngDevMode))
                 _throwError(dir, 'More than one built-in value accessor matches form control with');
             builtinAccessor = v;
         }
         else {
-            if (customAccessor)
+            if (customAccessor && (typeof ngDevMode === 'undefined' || ngDevMode))
                 _throwError(dir, 'More than one custom value accessor matches form control with');
             customAccessor = v;
         }
@@ -42572,7 +42520,9 @@ function selectValueAccessor(dir, valueAccessors) {
         return builtinAccessor;
     if (defaultAccessor)
         return defaultAccessor;
-    _throwError(dir, 'No valid value accessor for form control with');
+    if (typeof ngDevMode === 'undefined' || ngDevMode) {
+        _throwError(dir, 'No valid value accessor for form control with');
+    }
     return null;
 }
 function removeDir(list, el) {
@@ -42586,7 +42536,9 @@ function _ngModelWarning(name, type, instance, warningConfig) {
         return;
     if (((warningConfig === null || warningConfig === 'once') && !type._ngModelWarningSentOnce) ||
         (warningConfig === 'always' && !instance._ngModelWarningSent)) {
-        ReactiveErrors.ngModelWarning(name);
+        if (typeof ngDevMode === 'undefined' || ngDevMode) {
+            ReactiveErrors.ngModelWarning(name);
+        }
         type._ngModelWarningSentOnce = true;
         instance._ngModelWarningSent = true;
     }
@@ -42653,14 +42605,30 @@ function _find(control, path, delimiter) {
     });
     return controlToFind;
 }
-function coerceToValidator(validatorOrOpts) {
-    const validator = isOptionsObj(validatorOrOpts) ? validatorOrOpts.validators : validatorOrOpts;
+/**
+ * Gets validators from either an options object or given validators.
+ */
+function pickValidators(validatorOrOpts) {
+    return (isOptionsObj(validatorOrOpts) ? validatorOrOpts.validators : validatorOrOpts) || null;
+}
+/**
+ * Creates validator function by combining provided validators.
+ */
+function coerceToValidator(validator) {
     return Array.isArray(validator) ? composeValidators(validator) : validator || null;
 }
-function coerceToAsyncValidator(asyncValidator, validatorOrOpts) {
-    const origAsyncValidator = isOptionsObj(validatorOrOpts) ? validatorOrOpts.asyncValidators : asyncValidator;
-    return Array.isArray(origAsyncValidator) ? composeAsyncValidators(origAsyncValidator) :
-        origAsyncValidator || null;
+/**
+ * Gets async validators from either an options object or given validators.
+ */
+function pickAsyncValidators(asyncValidator, validatorOrOpts) {
+    return (isOptionsObj(validatorOrOpts) ? validatorOrOpts.asyncValidators : asyncValidator) || null;
+}
+/**
+ * Creates async validator function by combining provided async validators.
+ */
+function coerceToAsyncValidator(asyncValidator) {
+    return Array.isArray(asyncValidator) ? composeAsyncValidators(asyncValidator) :
+        asyncValidator || null;
 }
 function isOptionsObj(validatorOrOpts) {
     return validatorOrOpts != null && !Array.isArray(validatorOrOpts) &&
@@ -42684,13 +42652,18 @@ class AbstractControl {
     /**
      * Initialize the AbstractControl instance.
      *
-     * @param validator The function that determines the synchronous validity of this control.
-     * @param asyncValidator The function that determines the asynchronous validity of this
-     * control.
+     * @param validators The function or array of functions that is used to determine the validity of
+     *     this control synchronously.
+     * @param asyncValidators The function or array of functions that is used to determine validity of
+     *     this control asynchronously.
      */
-    constructor(validator, asyncValidator) {
-        this.validator = validator;
-        this.asyncValidator = asyncValidator;
+    constructor(validators, asyncValidators) {
+        /**
+         * Indicates that a control has its own pending asynchronous validation in progress.
+         *
+         * @internal
+         */
+        this._hasOwnPendingAsyncValidator = false;
         /** @internal */
         this._onCollectionChange = () => { };
         /**
@@ -42710,6 +42683,28 @@ class AbstractControl {
         this.touched = false;
         /** @internal */
         this._onDisabledChange = [];
+        this._rawValidators = validators;
+        this._rawAsyncValidators = asyncValidators;
+        this._composedValidatorFn = coerceToValidator(this._rawValidators);
+        this._composedAsyncValidatorFn = coerceToAsyncValidator(this._rawAsyncValidators);
+    }
+    /**
+     * The function that is used to determine the validity of this control synchronously.
+     */
+    get validator() {
+        return this._composedValidatorFn;
+    }
+    set validator(validatorFn) {
+        this._rawValidators = this._composedValidatorFn = validatorFn;
+    }
+    /**
+     * The function that is used to determine the validity of this control asynchronously.
+     */
+    get asyncValidator() {
+        return this._composedAsyncValidatorFn;
+    }
+    set asyncValidator(asyncValidatorFn) {
+        this._rawAsyncValidators = this._composedAsyncValidatorFn = asyncValidatorFn;
     }
     /**
      * The parent control.
@@ -42813,7 +42808,8 @@ class AbstractControl {
      *
      */
     setValidators(newValidator) {
-        this.validator = coerceToValidator(newValidator);
+        this._rawValidators = newValidator;
+        this._composedValidatorFn = coerceToValidator(newValidator);
     }
     /**
      * Sets the async validators that are active on this control. Calling this
@@ -42824,7 +42820,8 @@ class AbstractControl {
      *
      */
     setAsyncValidators(newValidator) {
-        this.asyncValidator = coerceToAsyncValidator(newValidator);
+        this._rawAsyncValidators = newValidator;
+        this._composedAsyncValidatorFn = coerceToAsyncValidator(newValidator);
     }
     /**
      * Empties out the sync validator list.
@@ -43094,14 +43091,21 @@ class AbstractControl {
     _runAsyncValidator(emitEvent) {
         if (this.asyncValidator) {
             this.status = PENDING;
+            this._hasOwnPendingAsyncValidator = true;
             const obs = toObservable(this.asyncValidator(this));
-            this._asyncValidationSubscription =
-                obs.subscribe((errors) => this.setErrors(errors, { emitEvent }));
+            this._asyncValidationSubscription = obs.subscribe((errors) => {
+                this._hasOwnPendingAsyncValidator = false;
+                // This will trigger the recalculation of the validation status, which depends on
+                // the state of the asynchronous validation (whether it is in progress or not). So, it is
+                // necessary that we have updated the `_hasOwnPendingAsyncValidator` boolean flag first.
+                this.setErrors(errors, { emitEvent });
+            });
         }
     }
     _cancelExistingSubscription() {
         if (this._asyncValidationSubscription) {
             this._asyncValidationSubscription.unsubscribe();
+            this._hasOwnPendingAsyncValidator = false;
         }
     }
     /**
@@ -43245,7 +43249,7 @@ class AbstractControl {
             return DISABLED;
         if (this.errors)
             return INVALID;
-        if (this._anyControlsHaveStatus(PENDING))
+        if (this._hasOwnPendingAsyncValidator || this._anyControlsHaveStatus(PENDING))
             return PENDING;
         if (this._anyControlsHaveStatus(INVALID))
             return INVALID;
@@ -43414,7 +43418,7 @@ class FormControl extends AbstractControl {
      *
      */
     constructor(formState = null, validatorOrOpts, asyncValidator) {
-        super(coerceToValidator(validatorOrOpts), coerceToAsyncValidator(asyncValidator, validatorOrOpts));
+        super(pickValidators(validatorOrOpts), pickAsyncValidators(asyncValidator, validatorOrOpts));
         /** @internal */
         this._onChange = [];
         this._applyFormState(formState);
@@ -43645,7 +43649,7 @@ class FormGroup extends AbstractControl {
      *
      */
     constructor(controls, validatorOrOpts, asyncValidator) {
-        super(coerceToValidator(validatorOrOpts), coerceToAsyncValidator(asyncValidator, validatorOrOpts));
+        super(pickValidators(validatorOrOpts), pickAsyncValidators(asyncValidator, validatorOrOpts));
         this.controls = controls;
         this._initObservables();
         this._setUpdateStrategy(validatorOrOpts);
@@ -43897,7 +43901,7 @@ class FormGroup extends AbstractControl {
     _throwIfControlMissing(name) {
         if (!Object.keys(this.controls).length) {
             throw new Error(`
-        There are no form controls registered with this group yet.  If you're using ngModel,
+        There are no form controls registered with this group yet. If you're using ngModel,
         you may want to check next tick (e.g. use setTimeout).
       `);
         }
@@ -44044,7 +44048,7 @@ class FormArray extends AbstractControl {
      *
      */
     constructor(controls, validatorOrOpts, asyncValidator) {
-        super(coerceToValidator(validatorOrOpts), coerceToAsyncValidator(asyncValidator, validatorOrOpts));
+        super(pickValidators(validatorOrOpts), pickAsyncValidators(asyncValidator, validatorOrOpts));
         this.controls = controls;
         this._initObservables();
         this._setUpdateStrategy(validatorOrOpts);
@@ -44315,7 +44319,7 @@ class FormArray extends AbstractControl {
     _throwIfControlMissing(index) {
         if (!this.controls.length) {
             throw new Error(`
-        There are no form controls registered with this array yet.  If you're using ngModel,
+        There are no form controls registered with this array yet. If you're using ngModel,
         you may want to check next tick (e.g. use setTimeout).
       `);
         }
@@ -44459,10 +44463,7 @@ class NgForm extends ControlContainer {
         this.form =
             new FormGroup({}, composeValidators(validators), composeAsyncValidators(asyncValidators));
     }
-    /**
-     * @description
-     * Lifecycle method called after the view is initialized. For internal use only.
-     */
+    /** @nodoc */
     ngAfterViewInit() {
         this._setUpdateStrategy();
     }
@@ -44689,22 +44690,16 @@ NgForm.propDecorators = {
  * @publicApi
  */
 class AbstractFormGroupDirective extends ControlContainer {
-    /**
-     * @description
-     * An internal callback method triggered on the instance after the inputs are set.
-     * Registers the group with its parent group.
-     */
+    /** @nodoc */
     ngOnInit() {
         this._checkParentType();
+        // Register the group with its parent group.
         this.formDirective.addFormGroup(this);
     }
-    /**
-     * @description
-     * An internal callback method triggered before the instance is destroyed.
-     * Removes the group from its parent group.
-     */
+    /** @nodoc */
     ngOnDestroy() {
         if (this.formDirective) {
+            // Remove the group from its parent group.
             this.formDirective.removeFormGroup(this);
         }
     }
@@ -44853,7 +44848,8 @@ class NgModelGroup extends AbstractFormGroupDirective {
     }
     /** @internal */
     _checkParentType() {
-        if (!(this._parent instanceof NgModelGroup) && !(this._parent instanceof NgForm)) {
+        if (!(this._parent instanceof NgModelGroup) && !(this._parent instanceof NgForm) &&
+            (typeof ngDevMode === 'undefined' || ngDevMode)) {
             TemplateDrivenErrors.modelGroupParentException();
         }
     }
@@ -45024,13 +45020,7 @@ class NgModel extends NgControl {
         this._rawAsyncValidators = asyncValidators || [];
         this.valueAccessor = selectValueAccessor(this, valueAccessors);
     }
-    /**
-     * @description
-     * A lifecycle method called when the directive's inputs change. For internal use
-     * only.
-     *
-     * @param changes A object of key/value pairs for the set of changed inputs.
-     */
+    /** @nodoc */
     ngOnChanges(changes) {
         this._checkForErrors();
         if (!this._registered)
@@ -45043,11 +45033,7 @@ class NgModel extends NgControl {
             this.viewModel = this.model;
         }
     }
-    /**
-     * @description
-     * Lifecycle method called before the directive's instance is destroyed. For internal
-     * use only.
-     */
+    /** @nodoc */
     ngOnDestroy() {
         this.formDirective && this.formDirective.removeControl(this);
     }
@@ -45116,18 +45102,20 @@ class NgModel extends NgControl {
         this._checkName();
     }
     _checkParentType() {
-        if (!(this._parent instanceof NgModelGroup) &&
-            this._parent instanceof AbstractFormGroupDirective) {
-            TemplateDrivenErrors.formGroupNameException();
-        }
-        else if (!(this._parent instanceof NgModelGroup) && !(this._parent instanceof NgForm)) {
-            TemplateDrivenErrors.modelParentException();
+        if (typeof ngDevMode === 'undefined' || ngDevMode) {
+            if (!(this._parent instanceof NgModelGroup) &&
+                this._parent instanceof AbstractFormGroupDirective) {
+                TemplateDrivenErrors.formGroupNameException();
+            }
+            else if (!(this._parent instanceof NgModelGroup) && !(this._parent instanceof NgForm)) {
+                TemplateDrivenErrors.modelParentException();
+            }
         }
     }
     _checkName() {
         if (this.options && this.options.name)
             this.name = this.options.name;
-        if (!this._isStandalone() && !this.name) {
+        if (!this._isStandalone() && !this.name && (typeof ngDevMode === 'undefined' || ngDevMode)) {
             TemplateDrivenErrors.missingNameException();
         }
     }
@@ -45305,18 +45293,14 @@ class FormControlDirective extends NgControl {
     }
     /**
      * @description
-     * Triggers a warning that this input should not be used with reactive forms.
+     * Triggers a warning in dev mode that this input should not be used with reactive forms.
      */
     set isDisabled(isDisabled) {
-        ReactiveErrors.disabledAttrWarning();
+        if (typeof ngDevMode === 'undefined' || ngDevMode) {
+            ReactiveErrors.disabledAttrWarning();
+        }
     }
-    /**
-     * @description
-     * A lifecycle method called when the directive's inputs change. For internal use
-     * only.
-     *
-     * @param changes A object of key/value pairs for the set of changed inputs.
-     */
+    /** @nodoc */
     ngOnChanges(changes) {
         if (this._isControlChanged(changes)) {
             setUpControl(this.form, this);
@@ -45501,12 +45485,7 @@ class FormGroupDirective extends ControlContainer {
          */
         this.ngSubmit = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
-    /**
-     * @description
-     * A lifecycle method called when the directive's inputs change. For internal use only.
-     *
-     * @param changes A object of key/value pairs for the set of changed inputs.
-     */
+    /** @nodoc */
     ngOnChanges(changes) {
         this._checkFormPresent();
         if (changes.hasOwnProperty('form')) {
@@ -45685,7 +45664,7 @@ class FormGroupDirective extends ControlContainer {
         this.form.asyncValidator = Validators.composeAsync([this.form.asyncValidator, async]);
     }
     _checkFormPresent() {
-        if (!this.form) {
+        if (!this.form && (typeof ngDevMode === 'undefined' || ngDevMode)) {
             ReactiveErrors.missingFormException();
         }
     }
@@ -45798,7 +45777,7 @@ class FormGroupName extends AbstractFormGroupDirective {
     }
     /** @internal */
     _checkParentType() {
-        if (_hasInvalidParent(this._parent)) {
+        if (_hasInvalidParent(this._parent) && (typeof ngDevMode === 'undefined' || ngDevMode)) {
             ReactiveErrors.groupParentException();
         }
     }
@@ -45876,18 +45855,17 @@ class FormArrayName extends ControlContainer {
         this._asyncValidators = asyncValidators;
     }
     /**
-     * @description
      * A lifecycle method called when the directive's inputs are initialized. For internal use only.
-     *
      * @throws If the directive does not have a valid parent.
+     * @nodoc
      */
     ngOnInit() {
         this._checkParentType();
         this.formDirective.addFormArray(this);
     }
     /**
-     * @description
      * A lifecycle method called before the directive's instance is destroyed. For internal use only.
+     * @nodoc
      */
     ngOnDestroy() {
         if (this.formDirective) {
@@ -45932,7 +45910,7 @@ class FormArrayName extends ControlContainer {
         return composeAsyncValidators(this._asyncValidators);
     }
     _checkParentType() {
-        if (_hasInvalidParent(this._parent)) {
+        if (_hasInvalidParent(this._parent) && (typeof ngDevMode === 'undefined' || ngDevMode)) {
             ReactiveErrors.arrayParentException();
         }
     }
@@ -46046,17 +46024,14 @@ class FormControlName extends NgControl {
     }
     /**
      * @description
-     * Triggers a warning that this input should not be used with reactive forms.
+     * Triggers a warning in dev mode that this input should not be used with reactive forms.
      */
     set isDisabled(isDisabled) {
-        ReactiveErrors.disabledAttrWarning();
+        if (typeof ngDevMode === 'undefined' || ngDevMode) {
+            ReactiveErrors.disabledAttrWarning();
+        }
     }
-    /**
-     * @description
-     * A lifecycle method called when the directive's inputs change. For internal use only.
-     *
-     * @param changes A object of key/value pairs for the set of changed inputs.
-     */
+    /** @nodoc */
     ngOnChanges(changes) {
         if (!this._added)
             this._setUpControl();
@@ -46066,10 +46041,7 @@ class FormControlName extends NgControl {
             this.formDirective.updateModel(this, this.model);
         }
     }
-    /**
-     * @description
-     * Lifecycle method called before the directive's instance is destroyed. For internal use only.
-     */
+    /** @nodoc */
     ngOnDestroy() {
         if (this.formDirective) {
             this.formDirective.removeControl(this);
@@ -46117,13 +46089,16 @@ class FormControlName extends NgControl {
         return composeAsyncValidators(this._rawAsyncValidators);
     }
     _checkParentType() {
-        if (!(this._parent instanceof FormGroupName) &&
-            this._parent instanceof AbstractFormGroupDirective) {
-            ReactiveErrors.ngModelGroupException();
-        }
-        else if (!(this._parent instanceof FormGroupName) && !(this._parent instanceof FormGroupDirective) &&
-            !(this._parent instanceof FormArrayName)) {
-            ReactiveErrors.controlParentException();
+        if (typeof ngDevMode === 'undefined' || ngDevMode) {
+            if (!(this._parent instanceof FormGroupName) &&
+                this._parent instanceof AbstractFormGroupDirective) {
+                ReactiveErrors.ngModelGroupException();
+            }
+            else if (!(this._parent instanceof FormGroupName) &&
+                !(this._parent instanceof FormGroupDirective) &&
+                !(this._parent instanceof FormArrayName)) {
+                ReactiveErrors.controlParentException();
+            }
         }
     }
     _setUpControl() {
@@ -46268,18 +46243,16 @@ class RequiredValidator {
             this._onChange();
     }
     /**
-     * @description
      * Method that validates whether the control is empty.
      * Returns the validation result if enabled, otherwise null.
+     * @nodoc
      */
     validate(control) {
         return this.required ? Validators.required(control) : null;
     }
     /**
-     * @description
      * Registers a callback function to call when the validator inputs change.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnValidatorChange(fn) {
         this._onChange = fn;
@@ -46325,9 +46298,9 @@ RequiredValidator.propDecorators = {
  */
 class CheckboxRequiredValidator extends RequiredValidator {
     /**
-     * @description
      * Method that validates whether or not the checkbox has been checked.
      * Returns the validation result if enabled, otherwise null.
+     * @nodoc
      */
     validate(control) {
         return this.required ? Validators.requiredTrue(control) : null;
@@ -46392,18 +46365,16 @@ class EmailValidator {
             this._onChange();
     }
     /**
-     * @description
      * Method that validates whether an email address is valid.
      * Returns the validation result if enabled, otherwise null.
+     * @nodoc
      */
     validate(control) {
         return this._enabled ? Validators.email(control) : null;
     }
     /**
-     * @description
      * Registers a callback function to call when the validator inputs change.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnValidatorChange(fn) {
         this._onChange = fn;
@@ -46457,13 +46428,7 @@ class MinLengthValidator {
     constructor() {
         this._validator = Validators.nullValidator;
     }
-    /**
-     * @description
-     * A lifecycle method called when the directive's inputs change. For internal use
-     * only.
-     *
-     * @param changes A object of key/value pairs for the set of changed inputs.
-     */
+    /** @nodoc */
     ngOnChanges(changes) {
         if ('minlength' in changes) {
             this._createValidator();
@@ -46472,18 +46437,16 @@ class MinLengthValidator {
         }
     }
     /**
-     * @description
-     * Method that validates whether the value meets a minimum length
-     * requirement. Returns the validation result if enabled, otherwise null.
+     * Method that validates whether the value meets a minimum length requirement.
+     * Returns the validation result if enabled, otherwise null.
+     * @nodoc
      */
     validate(control) {
         return this.minlength == null ? null : this._validator(control);
     }
     /**
-     * @description
      * Registers a callback function to call when the validator inputs change.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnValidatorChange(fn) {
         this._onChange = fn;
@@ -46543,13 +46506,7 @@ class MaxLengthValidator {
     constructor() {
         this._validator = Validators.nullValidator;
     }
-    /**
-     * @description
-     * A lifecycle method called when the directive's inputs change. For internal use
-     * only.
-     *
-     * @param changes A object of key/value pairs for the set of changed inputs.
-     */
+    /** @nodoc */
     ngOnChanges(changes) {
         if ('maxlength' in changes) {
             this._createValidator();
@@ -46558,18 +46515,15 @@ class MaxLengthValidator {
         }
     }
     /**
-     * @description
-     * Method that validates whether the value exceeds
-     * the maximum length requirement.
+     * Method that validates whether the value exceeds the maximum length requirement.
+     * @nodoc
      */
     validate(control) {
         return this.maxlength != null ? this._validator(control) : null;
     }
     /**
-     * @description
      * Registers a callback function to call when the validator inputs change.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnValidatorChange(fn) {
         this._onChange = fn;
@@ -46631,13 +46585,7 @@ class PatternValidator {
     constructor() {
         this._validator = Validators.nullValidator;
     }
-    /**
-     * @description
-     * A lifecycle method called when the directive's inputs change. For internal use
-     * only.
-     *
-     * @param changes A object of key/value pairs for the set of changed inputs.
-     */
+    /** @nodoc */
     ngOnChanges(changes) {
         if ('pattern' in changes) {
             this._createValidator();
@@ -46646,18 +46594,15 @@ class PatternValidator {
         }
     }
     /**
-     * @description
-     * Method that validates whether the value matches the
-     * the pattern requirement.
+     * Method that validates whether the value matches the the pattern requirement.
+     * @nodoc
      */
     validate(control) {
         return this._validator(control);
     }
     /**
-     * @description
      * Registers a callback function to call when the validator inputs change.
-     *
-     * @param fn The callback function
+     * @nodoc
      */
     registerOnValidatorChange(fn) {
         this._onChange = fn;
@@ -46880,7 +46825,7 @@ FormBuilder.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
 /**
  * @publicApi
  */
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('10.0.14');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Version"]('10.1.1');
 
 /**
  * @license
@@ -47054,7 +46999,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ɵgetDOM", function() { return _angular_common__WEBPACK_IMPORTED_MODULE_0__["ɵgetDOM"]; });
 
 /**
- * @license Angular v10.0.14
+ * @license Angular v10.1.1
  * (c) 2010-2020 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -49185,7 +49130,7 @@ function elementMatches(n, selector) {
 /**
  * @publicApi
  */
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('10.0.14');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('10.1.1');
 
 /**
  * @license
@@ -49226,7 +49171,7 @@ const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('10.0.
 /*!**********************************************************************!*\
   !*** ./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js ***!
   \**********************************************************************/
-/*! exports provided: ActivatedRoute, ActivatedRouteSnapshot, ActivationEnd, ActivationStart, ChildActivationEnd, ChildActivationStart, ChildrenOutletContexts, DefaultUrlSerializer, GuardsCheckEnd, GuardsCheckStart, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, NoPreloading, OutletContext, PRIMARY_OUTLET, PreloadAllModules, PreloadingStrategy, ROUTER_CONFIGURATION, ROUTER_INITIALIZER, ROUTES, ResolveEnd, ResolveStart, RouteConfigLoadEnd, RouteConfigLoadStart, RouteReuseStrategy, Router, RouterEvent, RouterLink, RouterLinkActive, RouterLinkWithHref, RouterModule, RouterOutlet, RouterPreloader, RouterState, RouterStateSnapshot, RoutesRecognized, Scroll, UrlHandlingStrategy, UrlSegment, UrlSegmentGroup, UrlSerializer, UrlTree, VERSION, convertToParamMap, provideRoutes, ɵEmptyOutletComponent, ɵROUTER_PROVIDERS, ɵangular_packages_router_router_a, ɵangular_packages_router_router_b, ɵangular_packages_router_router_c, ɵangular_packages_router_router_d, ɵangular_packages_router_router_e, ɵangular_packages_router_router_f, ɵangular_packages_router_router_g, ɵangular_packages_router_router_h, ɵangular_packages_router_router_i, ɵangular_packages_router_router_j, ɵangular_packages_router_router_k, ɵangular_packages_router_router_l, ɵangular_packages_router_router_m, ɵangular_packages_router_router_n, ɵangular_packages_router_router_o, ɵflatten */
+/*! exports provided: ActivatedRoute, ActivatedRouteSnapshot, ActivationEnd, ActivationStart, BaseRouteReuseStrategy, ChildActivationEnd, ChildActivationStart, ChildrenOutletContexts, DefaultUrlSerializer, GuardsCheckEnd, GuardsCheckStart, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, NoPreloading, OutletContext, PRIMARY_OUTLET, PreloadAllModules, PreloadingStrategy, ROUTER_CONFIGURATION, ROUTER_INITIALIZER, ROUTES, ResolveEnd, ResolveStart, RouteConfigLoadEnd, RouteConfigLoadStart, RouteReuseStrategy, Router, RouterEvent, RouterLink, RouterLinkActive, RouterLinkWithHref, RouterModule, RouterOutlet, RouterPreloader, RouterState, RouterStateSnapshot, RoutesRecognized, Scroll, UrlHandlingStrategy, UrlSegment, UrlSegmentGroup, UrlSerializer, UrlTree, VERSION, convertToParamMap, provideRoutes, ɵEmptyOutletComponent, ɵROUTER_PROVIDERS, ɵangular_packages_router_router_a, ɵangular_packages_router_router_b, ɵangular_packages_router_router_c, ɵangular_packages_router_router_d, ɵangular_packages_router_router_e, ɵangular_packages_router_router_f, ɵangular_packages_router_router_g, ɵangular_packages_router_router_h, ɵangular_packages_router_router_i, ɵangular_packages_router_router_j, ɵangular_packages_router_router_k, ɵangular_packages_router_router_l, ɵangular_packages_router_router_m, ɵangular_packages_router_router_n, ɵangular_packages_router_router_o, ɵflatten */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49235,6 +49180,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivatedRouteSnapshot", function() { return ActivatedRouteSnapshot; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivationEnd", function() { return ActivationEnd; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivationStart", function() { return ActivationStart; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseRouteReuseStrategy", function() { return BaseRouteReuseStrategy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChildActivationEnd", function() { return ChildActivationEnd; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChildActivationStart", function() { return ChildActivationStart; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChildrenOutletContexts", function() { return ChildrenOutletContexts; });
@@ -49301,7 +49247,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 /**
- * @license Angular v10.0.14
+ * @license Angular v10.1.1
  * (c) 2010-2020 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -49340,7 +49286,6 @@ __webpack_require__.r(__webpack_exports__);
  * @see [Router events summary](guide/router#router-events)
  * @publicApi
  */
-
 
 class RouterEvent {
     constructor(
@@ -49840,9 +49785,11 @@ function shallowEqual(a, b) {
  */
 function equalArraysOrString(a, b) {
     if (Array.isArray(a) && Array.isArray(b)) {
-        if (a.length != b.length)
+        if (a.length !== b.length)
             return false;
-        return a.every(aItem => b.indexOf(aItem) > -1);
+        const aSorted = [...a].sort();
+        const bSorted = [...b].sort();
+        return aSorted.every((val, index) => bSorted[index] === val);
     }
     else {
         return a === b;
@@ -49944,7 +49891,6 @@ function equalSegmentGroups(container, containee) {
     return true;
 }
 function containsQueryParams(container, containee) {
-    // TODO: This does not handle array params correctly.
     return Object.keys(containee).length <= Object.keys(container).length &&
         Object.keys(containee).every(key => equalArraysOrString(container[key], containee[key]));
 }
@@ -50210,6 +50156,10 @@ function serializeSegment(segment, root) {
             }
             return [`${k}:${serializeSegment(v, false)}`];
         });
+        // use no parenthesis if the only child is a primary outlet route
+        if (Object.keys(segment.children).length === 1 && segment.children[PRIMARY_OUTLET] != null) {
+            return `${serializePaths(segment)}/${children[0]}`;
+        }
         return `${serializePaths(segment)}/(${children.join('//')})`;
     }
 }
@@ -51415,6 +51365,9 @@ class ActivateRoutes {
                         // Otherwise it will get activated from its `ngOnInit` when instantiated
                         context.outlet.activateWith(future, cmpFactoryResolver);
                     }
+                    else if (Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["isDevMode"])() && console && console.warn) {
+                        console.warn(`A router outlet has not been instantiated during routes activation. URL Segment: '${future.snapshot._urlSegment}'`);
+                    }
                     this.activateChildRoutes(futureNode, null, context.children);
                 }
             }
@@ -51494,6 +51447,45 @@ function isCanActivateChild(guard) {
 }
 function isCanDeactivate(guard) {
     return guard && isFunction(guard.canDeactivate);
+}
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+const INITIAL_VALUE = Symbol('INITIAL_VALUE');
+function prioritizedGuardValue() {
+    return Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(obs => {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["combineLatest"])(...obs.map(o => o.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(INITIAL_VALUE))))
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["scan"])((acc, list) => {
+            let isPending = false;
+            return list.reduce((innerAcc, val, i) => {
+                if (innerAcc !== INITIAL_VALUE)
+                    return innerAcc;
+                // Toggle pending flag if any values haven't been set yet
+                if (val === INITIAL_VALUE)
+                    isPending = true;
+                // Any other return values are only valid if we haven't yet hit a pending
+                // call. This guarantees that in the case of a guard at the bottom of the
+                // tree that returns a redirect, we will wait for the higher priority
+                // guard at the top to finish before performing the redirect.
+                if (!isPending) {
+                    // Early return when we hit a `false` value as that should always
+                    // cancel navigation
+                    if (val === false)
+                        return val;
+                    if (i === list.length - 1 || isUrlTree(val)) {
+                        return val;
+                    }
+                }
+                return innerAcc;
+            }, acc);
+        }, INITIAL_VALUE), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(item => item !== INITIAL_VALUE), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(item => isUrlTree(item) ? item : item === true), //
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1));
+    });
 }
 
 /**
@@ -51655,11 +51647,11 @@ class ApplyRedirects {
     matchSegmentAgainstRoute(ngModule, rawSegmentGroup, route, segments) {
         if (route.path === '**') {
             if (route.loadChildren) {
-                return this.configLoader.load(ngModule.injector, route)
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["defer"])(() => this.configLoader.load(ngModule.injector, route)
                     .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])((cfg) => {
                     route._loadedConfig = cfg;
                     return new UrlSegmentGroup(segments, {});
-                }));
+                })));
             }
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(new UrlSegmentGroup(segments, {}));
         }
@@ -51711,7 +51703,7 @@ class ApplyRedirects {
         const canLoad = route.canLoad;
         if (!canLoad || canLoad.length === 0)
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(true);
-        const obs = Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(canLoad).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])((injectionToken) => {
+        const canLoadObservables = canLoad.map((injectionToken) => {
             const guard = moduleInjector.get(injectionToken);
             let guardVal;
             if (isCanLoad(guard)) {
@@ -51724,14 +51716,15 @@ class ApplyRedirects {
                 throw new Error('Invalid CanLoad guard');
             }
             return wrapIntoObservable(guardVal);
-        }));
-        return obs.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["concatAll"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])((result) => {
+        });
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(canLoadObservables)
+            .pipe(prioritizedGuardValue(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])((result) => {
             if (!isUrlTree(result))
                 return;
             const error = navigationCancelingError(`Redirecting to "${this.urlSerializer.serialize(result)}"`);
             error.url = result;
             throw error;
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["every"])(result => result === true));
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(result => result === true));
     }
     lineralizeSegments(route, urlTree) {
         let res = [];
@@ -52040,45 +52033,6 @@ function deactivateRouteAndItsChildren(route, context, checks) {
     else {
         checks.canDeactivateChecks.push(new CanDeactivate(null, r));
     }
-}
-
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-const INITIAL_VALUE = Symbol('INITIAL_VALUE');
-function prioritizedGuardValue() {
-    return Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(obs => {
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["combineLatest"])(...obs.map(o => o.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["startWith"])(INITIAL_VALUE))))
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["scan"])((acc, list) => {
-            let isPending = false;
-            return list.reduce((innerAcc, val, i) => {
-                if (innerAcc !== INITIAL_VALUE)
-                    return innerAcc;
-                // Toggle pending flag if any values haven't been set yet
-                if (val === INITIAL_VALUE)
-                    isPending = true;
-                // Any other return values are only valid if we haven't yet hit a pending
-                // call. This guarantees that in the case of a guard at the bottom of the
-                // tree that returns a redirect, we will wait for the higher priority
-                // guard at the top to finish before performing the redirect.
-                if (!isPending) {
-                    // Early return when we hit a `false` value as that should always
-                    // cancel navigation
-                    if (val === false)
-                        return val;
-                    if (i === list.length - 1 || isUrlTree(val)) {
-                        return val;
-                    }
-                }
-                return innerAcc;
-            }, acc);
-        }, INITIAL_VALUE), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(item => item !== INITIAL_VALUE), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(item => isUrlTree(item) ? item : item === true), //
-        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1));
-    });
 }
 
 /**
@@ -52574,22 +52528,52 @@ function switchTap(next) {
 class RouteReuseStrategy {
 }
 /**
- * Does not detach any subtrees. Reuses routes as long as their route config is the same.
+ * @description
+ *
+ * This base route reuse strategy only reuses routes when the matched router configs are
+ * identical. This prevents components from being destroyed and recreated
+ * when just the fragment or query parameters change
+ * (that is, the existing component is _reused_).
+ *
+ * This strategy does not store any routes for later reuse.
+ *
+ * Angular uses this strategy by default.
+ *
+ *
+ * It can be used as a base class for custom route reuse strategies, i.e. you can create your own
+ * class that extends the `BaseRouteReuseStrategy` one.
+ * @publicApi
  */
-class DefaultRouteReuseStrategy {
+class BaseRouteReuseStrategy {
+    /**
+     * Whether the given route should detach for later reuse.
+     * Always returns false for `BaseRouteReuseStrategy`.
+     * */
     shouldDetach(route) {
         return false;
     }
+    /**
+     * A no-op; the route is never stored since this strategy never detaches routes for later re-use.
+     */
     store(route, detachedTree) { }
+    /** Returns `false`, meaning the route (and its subtree) is never reattached */
     shouldAttach(route) {
         return false;
     }
+    /** Returns `null` because this strategy does not store routes for later re-use. */
     retrieve(route) {
         return null;
     }
+    /**
+     * Determines if a route should be reused.
+     * This strategy returns `true` when the future route config and current route config are
+     * identical.
+     */
     shouldReuseRoute(future, curr) {
         return future.routeConfig === curr.routeConfig;
     }
+}
+class DefaultRouteReuseStrategy extends BaseRouteReuseStrategy {
 }
 
 /**
@@ -52917,6 +52901,11 @@ class Router {
         this.config = config;
         this.lastSuccessfulNavigation = null;
         this.currentNavigation = null;
+        /**
+         * Tracks the previously seen location change from the location subscription so we can compare
+         * the two latest to see if they are duplicates. See setUpLocationChangeListener.
+         */
+        this.lastLocationChangeInfo = null;
         this.navigationId = 0;
         this.isNgZoneEnabled = false;
         /**
@@ -53317,24 +53306,68 @@ class Router {
         }
     }
     /**
-     * Sets up the location change listener.
+     * Sets up the location change listener. This listener detects navigations triggered from outside
+     * the Router (the browser back/forward buttons, for example) and schedules a corresponding Router
+     * navigation so that the correct events, guards, etc. are triggered.
      */
     setUpLocationChangeListener() {
         // Don't need to use Zone.wrap any more, because zone.js
         // already patch onPopState, so location change callback will
         // run into ngZone
         if (!this.locationSubscription) {
-            this.locationSubscription = this.location.subscribe((change) => {
-                let rawUrlTree = this.parseUrl(change['url']);
-                const source = change['type'] === 'popstate' ? 'popstate' : 'hashchange';
-                // Navigations coming from Angular router have a navigationId state property. When this
-                // exists, restore the state.
-                const state = change.state && change.state.navigationId ? change.state : null;
-                setTimeout(() => {
-                    this.scheduleNavigation(rawUrlTree, source, state, { replaceUrl: true });
-                }, 0);
+            this.locationSubscription = this.location.subscribe(event => {
+                const currentChange = this.extractLocationChangeInfoFromEvent(event);
+                if (this.shouldScheduleNavigation(this.lastLocationChangeInfo, currentChange)) {
+                    // The `setTimeout` was added in #12160 and is likely to support Angular/AngularJS
+                    // hybrid apps.
+                    setTimeout(() => {
+                        const { source, state, urlTree } = currentChange;
+                        const extras = { replaceUrl: true };
+                        if (state) {
+                            const stateCopy = Object.assign({}, state);
+                            delete stateCopy.navigationId;
+                            if (Object.keys(stateCopy).length !== 0) {
+                                extras.state = stateCopy;
+                            }
+                        }
+                        this.scheduleNavigation(urlTree, source, state, extras);
+                    }, 0);
+                }
+                this.lastLocationChangeInfo = currentChange;
             });
         }
+    }
+    /** Extracts router-related information from a `PopStateEvent`. */
+    extractLocationChangeInfoFromEvent(change) {
+        var _a;
+        return {
+            source: change['type'] === 'popstate' ? 'popstate' : 'hashchange',
+            urlTree: this.parseUrl(change['url']),
+            // Navigations coming from Angular router have a navigationId state
+            // property. When this exists, restore the state.
+            state: ((_a = change.state) === null || _a === void 0 ? void 0 : _a.navigationId) ? change.state : null,
+            transitionId: this.getTransition().id
+        };
+    }
+    /**
+     * Determines whether two events triggered by the Location subscription are due to the same
+     * navigation. The location subscription can fire two events (popstate and hashchange) for a
+     * single navigation. The second one should be ignored, that is, we should not schedule another
+     * navigation in the Router.
+     */
+    shouldScheduleNavigation(previous, current) {
+        if (!previous)
+            return true;
+        const sameDestination = current.urlTree.toString() === previous.urlTree.toString();
+        const eventsOccurredAtSameTime = current.transitionId === previous.transitionId;
+        if (!eventsOccurredAtSameTime || !sameDestination) {
+            return true;
+        }
+        if ((current.source === 'hashchange' && previous.source === 'popstate') ||
+            (current.source === 'popstate' && previous.source === 'hashchange')) {
+            return false;
+        }
+        return true;
     }
     /** The current URL. */
     get url() {
@@ -53378,7 +53411,7 @@ class Router {
     dispose() {
         if (this.locationSubscription) {
             this.locationSubscription.unsubscribe();
-            this.locationSubscription = null;
+            this.locationSubscription = undefined;
         }
     }
     /**
@@ -53569,26 +53602,27 @@ class Router {
         });
     }
     scheduleNavigation(rawUrl, source, restoredState, extras, priorPromise) {
+        // * Imperative navigations (router.navigate) might trigger additional navigations to the same
+        //   URL via a popstate event and the locationChangeListener. We should skip these duplicate
+        //   navs. Duplicates may also be triggered by attempts to sync AngularJS and Angular router
+        //   states.
+        // * Imperative navigations can be cancelled by router guards, meaning the URL won't change. If
+        //   the user follows that with a navigation using the back/forward button or manual URL change,
+        //   the destination may be the same as the previous imperative attempt. We should not skip
+        //   these navigations because it's a separate case from the one above -- it's not a duplicate
+        //   navigation.
         const lastNavigation = this.getTransition();
-        // If the user triggers a navigation imperatively (e.g., by using navigateByUrl),
-        // and that navigation results in 'replaceState' that leads to the same URL,
-        // we should skip those.
-        if (lastNavigation && source !== 'imperative' && lastNavigation.source === 'imperative' &&
-            lastNavigation.rawUrl.toString() === rawUrl.toString()) {
-            return Promise.resolve(true); // return value is not used
-        }
-        // Because of a bug in IE and Edge, the location class fires two events (popstate and
-        // hashchange) every single time. The second one should be ignored. Otherwise, the URL will
-        // flicker. Handles the case when a popstate was emitted first.
-        if (lastNavigation && source == 'hashchange' && lastNavigation.source === 'popstate' &&
-            lastNavigation.rawUrl.toString() === rawUrl.toString()) {
-            return Promise.resolve(true); // return value is not used
-        }
-        // Because of a bug in IE and Edge, the location class fires two events (popstate and
-        // hashchange) every single time. The second one should be ignored. Otherwise, the URL will
-        // flicker. Handles the case when a hashchange was emitted first.
-        if (lastNavigation && source == 'popstate' && lastNavigation.source === 'hashchange' &&
-            lastNavigation.rawUrl.toString() === rawUrl.toString()) {
+        // We don't want to skip duplicate successful navs if they're imperative because
+        // onSameUrlNavigation could be 'reload' (so the duplicate is intended).
+        const browserNavPrecededByRouterNav = source !== 'imperative' && (lastNavigation === null || lastNavigation === void 0 ? void 0 : lastNavigation.source) === 'imperative';
+        const lastNavigationSucceeded = this.lastSuccessfulId === lastNavigation.id;
+        // If the last navigation succeeded or is in flight, we can use the rawUrl as the comparison.
+        // However, if it failed, we should compare to the final result (urlAfterRedirects).
+        const lastNavigationUrl = (lastNavigationSucceeded || this.currentNavigation) ?
+            lastNavigation.rawUrl :
+            lastNavigation.urlAfterRedirects;
+        const duplicateNav = lastNavigationUrl.toString() === rawUrl.toString();
+        if (browserNavPrecededByRouterNav && duplicateNav) {
             return Promise.resolve(true); // return value is not used
         }
         let resolve;
@@ -53949,8 +53983,8 @@ class RouterLinkWithHref {
         this.subscription.unsubscribe();
     }
     /** @nodoc */
-    onClick(button, ctrlKey, metaKey, shiftKey) {
-        if (button !== 0 || ctrlKey || metaKey || shiftKey) {
+    onClick(button, ctrlKey, shiftKey, altKey, metaKey) {
+        if (button !== 0 || ctrlKey || shiftKey || altKey || metaKey) {
             return true;
         }
         if (typeof this.target === 'string' && this.target != '_self') {
@@ -53980,7 +54014,7 @@ class RouterLinkWithHref {
 }
 RouterLinkWithHref.ɵfac = function RouterLinkWithHref_Factory(t) { return new (t || RouterLinkWithHref)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](Router), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_0__["LocationStrategy"])); };
 RouterLinkWithHref.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({ type: RouterLinkWithHref, selectors: [["a", "routerLink", ""], ["area", "routerLink", ""]], hostVars: 2, hostBindings: function RouterLinkWithHref_HostBindings(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function RouterLinkWithHref_click_HostBindingHandler($event) { return ctx.onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function RouterLinkWithHref_click_HostBindingHandler($event) { return ctx.onClick($event.button, $event.ctrlKey, $event.shiftKey, $event.altKey, $event.metaKey); });
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵhostProperty"]("href", ctx.href, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵattribute"]("target", ctx.target);
@@ -54002,7 +54036,8 @@ RouterLinkWithHref.propDecorators = {
     href: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"] }],
     routerLink: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
     preserveQueryParams: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
-    onClick: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"], args: ['click', ['$event.button', '$event.ctrlKey', '$event.metaKey', '$event.shiftKey'],] }]
+    onClick: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"], args: ['click',
+                ['$event.button', '$event.ctrlKey', '$event.shiftKey', '$event.altKey', '$event.metaKey'],] }]
 };
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](RouterLinkWithHref, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
@@ -54015,7 +54050,8 @@ RouterLinkWithHref.propDecorators = {
     /** @nodoc */
     onClick: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-            args: ['click', ['$event.button', '$event.ctrlKey', '$event.metaKey', '$event.shiftKey']]
+            args: ['click',
+                ['$event.button', '$event.ctrlKey', '$event.shiftKey', '$event.altKey', '$event.metaKey']]
         }], href: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostBinding"]
         }], target: [{
@@ -54454,7 +54490,7 @@ class PreloadingStrategy {
  * Provides a preloading strategy that preloads all modules as quickly as possible.
  *
  * ```
- * RouteModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
+ * RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
  * ```
  *
  * @publicApi
@@ -55015,7 +55051,7 @@ function provideRouterInitializer() {
 /**
  * @publicApi
  */
-const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('10.0.14');
+const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('10.1.1');
 
 /**
  * @license
@@ -66171,16 +66207,14 @@ function bytesToUuid(buf, offset) {
   var i = offset || 0;
   var bth = byteToHex;
   // join used to fix memory issue caused by concatenation: https://bugs.chromium.org/p/v8/issues/detail?id=3175#c4
-  return ([
-    bth[buf[i++]], bth[buf[i++]],
-    bth[buf[i++]], bth[buf[i++]], '-',
-    bth[buf[i++]], bth[buf[i++]], '-',
-    bth[buf[i++]], bth[buf[i++]], '-',
-    bth[buf[i++]], bth[buf[i++]], '-',
-    bth[buf[i++]], bth[buf[i++]],
-    bth[buf[i++]], bth[buf[i++]],
-    bth[buf[i++]], bth[buf[i++]]
-  ]).join('');
+  return ([bth[buf[i++]], bth[buf[i++]], 
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]], '-',
+	bth[buf[i++]], bth[buf[i++]],
+	bth[buf[i++]], bth[buf[i++]],
+	bth[buf[i++]], bth[buf[i++]]]).join('');
 }
 
 module.exports = bytesToUuid;
@@ -66255,7 +66289,7 @@ var _clockseq;
 var _lastMSecs = 0;
 var _lastNSecs = 0;
 
-// See https://github.com/uuidjs/uuid for API details
+// See https://github.com/broofa/node-uuid for API details
 function v1(options, buf, offset) {
   var i = buf && offset || 0;
   var b = buf || [];
