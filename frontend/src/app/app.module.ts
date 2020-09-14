@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -17,6 +16,7 @@ import { ResumeComponent } from './resume/resume.component';
 
 import { EmailService } from './email.service';
 import { MessageService } from './message.service';
+import { GoogleAnalyticsService } from './google-analytics.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,10 +31,10 @@ import { MessageService } from './message.service';
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
     EmailService,
     MessageService,
+    GoogleAnalyticsService,
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
