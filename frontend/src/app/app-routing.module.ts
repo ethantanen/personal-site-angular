@@ -7,10 +7,26 @@ import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
-  { path: 'about-me', component: AboutMeComponent },
-  { path: 'email-me', component: EmailMeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'resume', component: ResumeComponent },
+  {
+    path: 'about-me', component: AboutMeComponent, children: [
+      { path: '**', redirectTo: '/about-me', }
+    ]
+  },
+  {
+    path: 'email-me', component: EmailMeComponent, children: [
+      { path: '**', redirectTo: '/email-me', }
+    ]
+  },
+  {
+    path: 'home', component: HomeComponent, children: [
+      { path: '**', redirectTo: '/home', }
+    ]
+  },
+  {
+    path: 'resume', component: ResumeComponent, children: [
+      { path: '**', redirectTo: '/resume', }
+    ]
+  },
   { path: '**', redirectTo: 'home' },
 ];
 
@@ -18,4 +34,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
