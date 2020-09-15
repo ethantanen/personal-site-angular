@@ -190,10 +190,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: 'about-me', component: _about_me_about_me_component__WEBPACK_IMPORTED_MODULE_2__["AboutMeComponent"] },
-    { path: 'email-me', component: _email_me_email_me_component__WEBPACK_IMPORTED_MODULE_3__["EmailMeComponent"] },
-    { path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"] },
-    { path: 'resume', component: _resume_resume_component__WEBPACK_IMPORTED_MODULE_5__["ResumeComponent"] },
+    {
+        path: 'about-me', component: _about_me_about_me_component__WEBPACK_IMPORTED_MODULE_2__["AboutMeComponent"], children: [
+            { path: '**', redirectTo: '/about-me', }
+        ]
+    },
+    {
+        path: 'email-me', component: _email_me_email_me_component__WEBPACK_IMPORTED_MODULE_3__["EmailMeComponent"], children: [
+            { path: '**', redirectTo: '/email-me', }
+        ]
+    },
+    {
+        path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], children: [
+            { path: '**', redirectTo: '/home', }
+        ]
+    },
+    {
+        path: 'resume', component: _resume_resume_component__WEBPACK_IMPORTED_MODULE_5__["ResumeComponent"], children: [
+            { path: '**', redirectTo: '/resume', }
+        ]
+    },
     { path: '**', redirectTo: 'home' },
 ];
 class AppRoutingModule {
